@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export default function ProjectBox({ img, title, text, action}) {
   return (

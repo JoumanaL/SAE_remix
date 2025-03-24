@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-0DLF9kdB.js";import"./index-qerWOj_W.js";const m=({imageUrl:a,imageAlt:t,title:e,description:i})=>s.jsxs("div",{className:"tab-img-container",children:[s.jsx("img",{src:a,alt:t,className:"tab-img"}),s.jsxs("div",{className:"tab-content",children:[s.jsx("h2",{children:e}),s.jsx("p",{children:i})]})]});export{m as default};

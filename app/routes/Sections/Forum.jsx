@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets

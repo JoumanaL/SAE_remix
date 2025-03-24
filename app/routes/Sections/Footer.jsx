@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { Link } from "@remix-run/react";
 // Assets
 import LogoImg from "../../assets/svg/Logo";
