@@ -38,7 +38,7 @@ const Accueil = () => {
       </div>
       {/* <img src='../img/italie_icon.png' alt="Description de l'image"/> */}
 
-      <img className="img" src={require('../img/Italie_icon.png')} alt="Description de l'image" />
+      <img className="img" src="/img/Italie_icon.png" alt="Description de l'image" />
 
       <div className="accueil-container1">
 
