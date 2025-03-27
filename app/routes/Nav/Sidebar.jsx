@@ -6,8 +6,8 @@ import LogoIcon from "../Icons/Logo";
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
-    <Wrapper role="navigation" className="animate darkBg" sidebarOpen={sidebarOpen}>
-      <SidebarHeader className="flexSpaceCenter">
+<Wrapper role="navigation" className="animate darkBg" isOpen={sidebarOpen}>
+<SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LogoIcon />
         </div>
@@ -73,7 +73,7 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   padding: 0 30px;
-  right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
+right: ${(props) => (props.isOpen ? "0px" : "-400px")};
   z-index: 9999;
   @media (max-width: 400px) {
     width: 100%;

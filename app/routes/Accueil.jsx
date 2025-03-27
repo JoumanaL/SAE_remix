@@ -4,6 +4,8 @@ import TabImg from './TabImg';
 import Actualite from './Actualite'; // Composant d'actualité
 import image from '../img/drapeau_italie2.jpg'; // Cette image peut rester en import si elle est dans app/img
 
+
+
 const Accueil = () => {
   return (
     <div className="accueil-container">

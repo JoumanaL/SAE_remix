@@ -5,21 +5,18 @@ import styled from "@emotion/styled";
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
-import LogoIcon from "../Icons/Logo";
+import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
 export default function TopNavbar() {
-  const [y, setY] = useState(0); // valeur par défaut
-
+  const [y, setY] = useState(0);
   const [sidebarOpen, toggleSidebar] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const handleScroll = () => setY(window.scrollY);
       window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
+      return () => window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
@@ -27,24 +24,49 @@ export default function TopNavbar() {
     <>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper style={y > 100 ? { height: "60px" } : { height: "80px" }}>
-        <NavInner>
-          <a href="/accueil">
+
+      <Wrapper
+        className="flexCenter animate whiteBg"
+        style={y > 100 ? { height: "60px" } : { height: "80px" }}
+      >
+        <NavInner className="container flexSpaceCenter">
+          <a href="/accueil" className="pointer flexNullCenter">
             <LogoIcon />
           </a>
-          <BurderWrapper onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurderWrapper
+            className="pointer"
+            onClick={() => toggleSidebar(!sidebarOpen)}
+          >
             <BurgerIcon />
           </BurderWrapper>
-          <UlWrapper>
-            <li><a href="/accueil">Accueil</a></li>
-            <li><a href="/Forum">Forum</a></li>
-            <li><a href="/Activités">Activités</a></li>
-            <li><a href="/Contact">Nous connaître</a></li>
-            <li><a href="/adherer">Adhérer</a></li>
-            <li><a href="/Promouvoir">Promouvoir</a></li>
-            <li><a href="/apprendre">Apprendre</a></li>
-            <li><a href="/enseigner">Enseigner</a></li>
-            <li><a href="/divers">Divers</a></li>
+          <UlWrapper className="flexNullCenter">
+            <li className="semiBold font15 pointer">
+              <a href="/accueil" style={{ padding: "10px 15px" }}>Accueil</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/Forum" style={{ padding: "10px 15px" }}>Forum</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/Activités" style={{ padding: "10px 15px" }}>Activités</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/Contact" style={{ padding: "10px 15px" }}>Nous connaître</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/adherer" style={{ padding: "10px 15px" }}>Adhérer</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/Promouvoir" style={{ padding: "10px 15px" }}>Promouvoir</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/apprendre" style={{ padding: "10px 15px" }}>Apprendre</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/enseigner" style={{ padding: "10px 15px" }}>Enseigner</a>
+            </li>
+            <li className="semiBold font15 pointer">
+              <a href="/divers" style={{ padding: "10px 15px" }}>Divers</a>
+            </li>
           </UlWrapper>
         </NavInner>
       </Wrapper>
@@ -58,27 +80,20 @@ const Wrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 999;
-  background: white;
-  transition: height 0.3s ease;
 `;
 
 const NavInner = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
+  position: relative;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
 `;
 
 const BurderWrapper = styled.button`
   outline: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  border: 0px;
+  background-color: transparent;
+  height: 100%;
+  padding: 0 15px;
   display: none;
-
   @media (max-width: 760px) {
     display: block;
   }
@@ -86,22 +101,6 @@ const BurderWrapper = styled.button`
 
 const UlWrapper = styled.ul`
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin-left: 15px;
-
-    a {
-      text-decoration: none;
-      padding: 10px 15px;
-      font-weight: 600;
-      font-size: 15px;
-      color: black;
-    }
-  }
-
   @media (max-width: 760px) {
     display: none;
   }

@@ -5,8 +5,8 @@ import { RemixServer, Outlet, Meta, Links, ScrollRestoration, Scripts, Link } fr
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "@emotion/styled";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 const ABORT_DELAY = 5e3;
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext, loadContext) {
@@ -159,6 +159,238 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   __proto__: null,
   default: UniversityTable
 }, Symbol.toStringTag, { value: "Module" }));
+function BlogBox({ tag, title, text, action, author }) {
+  return /* @__PURE__ */ jsx(WrapperBtn, { className: "animate pointer", onClick: action ? () => action() : null, children: /* @__PURE__ */ jsxs(Wrapper$c, { className: "whiteBg radius8 shadow", children: [
+    /* @__PURE__ */ jsx("h3", { className: "font20 extraBold darkColor", children: title }),
+    /* @__PURE__ */ jsx("p", { className: "font13", style: { padding: "30px 0" }, children: text }),
+    /* @__PURE__ */ jsx("p", { className: "font13 extraBold", children: author }),
+    /* @__PURE__ */ jsx("div", { className: "flex", children: /* @__PURE__ */ jsx("p", { className: "tag coralBg radius6 font13 extraBold", children: tag }) })
+  ] }) });
+}
+const Wrapper$c = styled.div`
+  width: 100%;
+  text-align: left;
+  padding: 20px 30px;
+  margin-top: 30px;
+`;
+const WrapperBtn = styled.button`
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  :hover {
+    opacity: 0.5;
+  }
+`;
+function FullButton({ title, action, border }) {
+  return /* @__PURE__ */ jsx(
+    Wrapper$b,
+    {
+      className: "animate pointer radius8",
+      onClick: action ? () => action() : null,
+      border,
+      children: title
+    }
+  );
+}
+const Wrapper$b = styled.button`
+  border: 1px solid ${(props) => props.border ? "#7b151a" : "#CD212A"};
+  background-color: ${(props) => props.border ? "transparent" : "#CD212A"};
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  color: ${(props) => props.border ? "#7b151a" : "#fff"};
+  :hover {
+    background-color: ${(props) => props.border ? "transparent" : "#7b151a"};
+    border: 1px solid #7b151a;
+    color: ${(props) => props.border ? "#CD212A" : "#fff"};
+  }
+`;
+const HeaderImage$5 = "/assets/Header-Activites-DwGlyY33.jpg";
+function HeaderActivités$1() {
+  return /* @__PURE__ */ jsxs(HeaderWrapper$5, { className: "container flexSpaceCenter", children: [
+    /* @__PURE__ */ jsx(LeftSide$5, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
+      /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
+        /* @__PURE__ */ jsx("span", { className: "darkColor", children: "Activités" }),
+        " culutrelles"
+      ] }),
+      /* @__PURE__ */ jsx(HeaderP$5, { className: "font15", children: "Bienvenue sur notre page activités culturelles. Explorez la richesse culturelle italienne : concerts envoûtants, expositions captivantes, et littérature inspirante !     " }),
+      /* @__PURE__ */ jsx(BtnWrapper$4, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
+    ] }) }),
+    /* @__PURE__ */ jsx(RightSide$5, { children: /* @__PURE__ */ jsx(ImageWrapper$5, { children: /* @__PURE__ */ jsx(Img$5, { className: "radius8", src: HeaderImage$5, alt: "office", style: { zIndex: 9 } }) }) })
+  ] });
+}
+function Activités$1() {
+  return /* @__PURE__ */ jsx(Wrapper$a, { children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsxs("div", { className: "container", children: [
+    /* @__PURE__ */ jsxs("div", { className: "row textCenter", children: [
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Concours Dante Dì",
+          text: "Le Consulat Général d’Italie à Paris, en collaboration avec l’Institut Culturel Italien de Paris, lance le concours DANTE DÌ à l’occasion du Septième Centenaire de la mort de Dante, organisé par la Société Dante Alighieri - Comites.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Paolo Fresu et Daniele di Bonaventura en concert.",
+          text: "Mercredi  21 Oct 2020 de 19h à 20h30, l'IIC (50, rue de Varenne) nous invite au concert de Paolo Fresu et Daniele di Bonaventura. Paolo Fresu est l’un des plus grands trompettistes de jazz d’aujourd’hui.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Sicilia, Tunisia, ...",
+          text: "Sur scène à Nanterre, «Sicilia.» Ce spectacle a été joué plus de 140 fois, traduit en italien et anglais, et joué en France et à l'étranger [...].",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) })
+    ] }),
+    /* @__PURE__ */ jsxs("div", { className: "row textCenter", children: [
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Italissimo 2020",
+          text: "La cinquième édition d’ITALISSIMO, le festival de littérature et culture italiennes, qui devait se tenir en avril, aura lieu du 8 au 13 octobre 2020.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Exposition Gramsci à l'IIC",
+          text: "Pour célébrer la richesse et la vivacité de la pensée d’Antonio Gramsci, la Fondation Gramsci et l’Institut culturel italien de Paris vous invitent à découvrir l’exposition « Les Cahiers de prison et la France »[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "L'essor des séries italiennes à l'IIC",
+          text: "Le 22 septembre 2020 à 19h, l'Institut culturel italien vous convie à une rencontre consacrée à la Fiction à l'italienne. De Gomorra à la série de Paolo Sorrentino, The young Pope.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Erri De Luca, au MK2 Bibliothèque",
+          text: "\r\n                L’écrivain italien Erri De Luca sera au mk2 Bibliothèque (Paris 13° ) du vendredi 18 au dimanche 20 septembre 2020 pour une série de trois entretiens et la projection d’un film qu’il présentera.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Soirée de chants traditionnels italiens et stage de chant",
+          text: "Le Studio DTM - Danse Théâtre Musique accueille le 20 Mars 2020 à 20h30 un artiste italien, pour une soirée de chants et bals traditionnels des régions Marche et Abruzzo.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) }),
+      /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
+        BlogBox,
+        {
+          title: "Cézanne et Rêve d’Italie au Musée Marmottan.",
+          text: "Au musée Marmottan Monet, Paris 16ème, vient de s’ouvrir une exposition inédite intitulée «Cézanne et les maîtres. Rêve d’Italie». Elle aura lieu jusqu’au 5 juillet 2020.[...]",
+          tag: "Lire plus",
+          action: () => alert("clicked")
+        }
+      ) })
+    ] }),
+    /* @__PURE__ */ jsx("div", { className: "row flexCenter", children: /* @__PURE__ */ jsx("div", { style: { margin: "50px 0", width: "200px" } }) })
+  ] }) }) });
+}
+const Wrapper$a = styled.section`
+  width: 100%;
+  padding-top: 20px;
+`;
+const HeaderWrapper$5 = styled.section`
+  padding-top: 80px;
+  width: 100%;
+  min-height: 840px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+const LeftSide$5 = styled.div`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 2;
+    margin: 50px 0;
+    text-align: center;
+  }
+  @media (max-width: 560px) {
+    margin: 80px 0 50px 0;
+  }
+`;
+const RightSide$5 = styled.div`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 1;
+    margin-top: 30px;
+  }
+`;
+const HeaderP$5 = styled.div`
+  max-width: 470px;
+  padding: 15px 0 50px 0;
+  line-height: 1.5rem;
+  @media (max-width: 960px) {
+    padding: 15px 0 50px 0;
+    text-align: center;
+    max-width: 100%;
+  }
+`;
+const BtnWrapper$4 = styled.div`
+  max-width: 190px;
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
+`;
+styled.div`
+  width: 30%;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  @media (max-width: 960px) {
+    display: none;
+  }
+`;
+const ImageWrapper$5 = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 9;
+  @media (max-width: 960px) {
+    width: 100%;
+    justify-content: center;
+  }
+`;
+const Img$5 = styled.img`
+  @media (max-width: 560px) {
+    width: 80%;
+    height: auto;
+  }
+`;
+const route2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  Activités: Activités$1,
+  HeaderActivités: HeaderActivités$1
+}, Symbol.toStringTag, { value: "Module" }));
 const Actualite = ({ image: image2, title, description, url }) => {
   const maxTitleLength = 50;
   const trimmedTitle = title.length > maxTitleLength ? title.substring(0, maxTitleLength) + "..." : title;
@@ -173,7 +405,7 @@ const Actualite = ({ image: image2, title, description, url }) => {
     ] })
   ] });
 };
-const route2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Actualite
 }, Symbol.toStringTag, { value: "Module" }));
@@ -191,7 +423,7 @@ const Hero = ({ title, description, buttonText, heroImage: heroImage2, scrollTo 
     " "
   ] });
 };
-const route11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Hero
 }, Symbol.toStringTag, { value: "Module" }));
@@ -319,7 +551,7 @@ const Apprendre = () => {
     universitiesDataVersailles.map((university, index) => /* @__PURE__ */ jsx(UniversityTable, { university }, index))
   ] });
 };
-const route3 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Apprendre
 }, Symbol.toStringTag, { value: "Module" }));
@@ -367,7 +599,7 @@ const Enseigner = () => {
     ] })
   ] });
 };
-const route4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Enseigner
 }, Symbol.toStringTag, { value: "Module" }));
@@ -380,7 +612,7 @@ const TabImg = ({ imageUrl, imageAlt, title, description }) => {
     ] })
   ] });
 };
-const route9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: TabImg
 }, Symbol.toStringTag, { value: "Module" }));
@@ -498,7 +730,7 @@ const Accueil = () => {
     ] })
   ] });
 };
-const route5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Accueil
 }, Symbol.toStringTag, { value: "Module" }));
@@ -553,7 +785,7 @@ const Adherer = () => {
     ] })
   ] });
 };
-const route6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Adherer
 }, Symbol.toStringTag, { value: "Module" }));
@@ -594,7 +826,7 @@ function SvgComponent$2(props) {
   );
 }
 function Sidebar({ sidebarOpen, toggleSidebar }) {
-  return /* @__PURE__ */ jsxs(Wrapper$a, { role: "navigation", className: "animate darkBg", sidebarOpen, children: [
+  return /* @__PURE__ */ jsxs(Wrapper$9, { role: "navigation", className: "animate darkBg", isOpen: sidebarOpen, children: [
     /* @__PURE__ */ jsxs(SidebarHeader, { className: "flexSpaceCenter", children: [
       /* @__PURE__ */ jsx("div", { className: "flexNullCenter", children: /* @__PURE__ */ jsx(SvgComponent$2, {}) }),
       /* @__PURE__ */ jsx(CloseBtn, { onClick: () => toggleSidebar(!sidebarOpen), className: "animate pointer", children: /* @__PURE__ */ jsx(CloseIcon, {}) })
@@ -612,13 +844,13 @@ function Sidebar({ sidebarOpen, toggleSidebar }) {
     ] })
   ] });
 }
-const Wrapper$a = styled.div`
+const Wrapper$9 = styled.div`
   width: 400px;
   height: 100vh;
   position: fixed;
   top: 0;
   padding: 0 30px;
-  right: ${(props) => props.sidebarOpen ? "0px" : "-400px"};
+right: ${(props) => props.isOpen ? "0px" : "-400px"};
   z-index: 9999;
   @media (max-width: 400px) {
     width: 100%;
@@ -640,9 +872,9 @@ const UlStyle = styled.ul`
   }
 `;
 function Backdrop({ toggleSidebar }) {
-  return /* @__PURE__ */ jsx(Wrapper$9, { className: "darkBg", onClick: () => toggleSidebar(false) });
+  return /* @__PURE__ */ jsx(Wrapper$8, { className: "darkBg", onClick: () => toggleSidebar(false) });
 }
-const Wrapper$9 = styled.div`
+const Wrapper$8 = styled.div`
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -652,96 +884,6 @@ const Wrapper$9 = styled.div`
   opacity: 0.8;
 `;
 function SvgComponent$1(props) {
-  return /* @__PURE__ */ jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: 28, height: 22, viewBox: "0 0 28 22", ...props, children: [
-    /* @__PURE__ */ jsx("path", { "data-name": "Line 5", fill: "none", stroke: "#0b093b", strokeLinecap: "round", strokeWidth: 2, d: "M1 1h26" }),
-    /* @__PURE__ */ jsx("path", { "data-name": "Line 6", fill: "none", stroke: "#0b093b", strokeLinecap: "round", strokeWidth: 2, d: "M1 11h26" }),
-    /* @__PURE__ */ jsx("path", { "data-name": "Line 7", fill: "none", stroke: "#0b093b", strokeLinecap: "round", strokeWidth: 2, d: "M1 21h26" })
-  ] });
-}
-function TopNavbar() {
-  const [y, setY] = useState(0);
-  const [sidebarOpen, toggleSidebar] = useState(false);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleScroll = () => setY(window.scrollY);
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, []);
-  return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Sidebar, { sidebarOpen, toggleSidebar }),
-    sidebarOpen && /* @__PURE__ */ jsx(Backdrop, { toggleSidebar }),
-    /* @__PURE__ */ jsx(Wrapper$8, { style: y > 100 ? { height: "60px" } : { height: "80px" }, children: /* @__PURE__ */ jsxs(NavInner, { children: [
-      /* @__PURE__ */ jsx("a", { href: "/accueil", children: /* @__PURE__ */ jsx(SvgComponent$2, {}) }),
-      /* @__PURE__ */ jsx(BurderWrapper, { onClick: () => toggleSidebar(!sidebarOpen), children: /* @__PURE__ */ jsx(SvgComponent$1, {}) }),
-      /* @__PURE__ */ jsxs(UlWrapper, { children: [
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/accueil", children: "Accueil" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/Forum", children: "Forum" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/Activités", children: "Activités" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/Contact", children: "Nous connaître" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/adherer", children: "Adhérer" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/Promouvoir", children: "Promouvoir" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/apprendre", children: "Apprendre" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/enseigner", children: "Enseigner" }) }),
-        /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "/divers", children: "Divers" }) })
-      ] })
-    ] }) })
-  ] });
-}
-const Wrapper$8 = styled.nav`
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  background: white;
-  transition: height 0.3s ease;
-`;
-const NavInner = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-`;
-const BurderWrapper = styled.button`
-  outline: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: none;
-
-  @media (max-width: 760px) {
-    display: block;
-  }
-`;
-const UlWrapper = styled.ul`
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin-left: 15px;
-
-    a {
-      text-decoration: none;
-      padding: 10px 15px;
-      font-weight: 600;
-      font-size: 15px;
-      color: black;
-    }
-  }
-
-  @media (max-width: 760px) {
-    display: none;
-  }
-`;
-function SvgComponent(props) {
   return /* @__PURE__ */ jsx(
     "svg",
     {
@@ -771,13 +913,92 @@ function SvgComponent(props) {
     }
   );
 }
+function SvgComponent(props) {
+  return /* @__PURE__ */ jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", width: 28, height: 22, viewBox: "0 0 28 22", ...props, children: [
+    /* @__PURE__ */ jsx("path", { "data-name": "Line 5", fill: "none", stroke: "#0b093b", strokeLinecap: "round", strokeWidth: 2, d: "M1 1h26" }),
+    /* @__PURE__ */ jsx("path", { "data-name": "Line 6", fill: "none", stroke: "#0b093b", strokeLinecap: "round", strokeWidth: 2, d: "M1 11h26" }),
+    /* @__PURE__ */ jsx("path", { "data-name": "Line 7", fill: "none", stroke: "#0b093b", strokeLinecap: "round", strokeWidth: 2, d: "M1 21h26" })
+  ] });
+}
+function TopNavbar() {
+  const [y, setY] = useState(0);
+  const [sidebarOpen, toggleSidebar] = useState(false);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleScroll = () => setY(window.scrollY);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, []);
+  return /* @__PURE__ */ jsxs(Fragment, { children: [
+    /* @__PURE__ */ jsx(Sidebar, { sidebarOpen, toggleSidebar }),
+    sidebarOpen && /* @__PURE__ */ jsx(Backdrop, { toggleSidebar }),
+    /* @__PURE__ */ jsx(
+      Wrapper$7,
+      {
+        className: "flexCenter animate whiteBg",
+        style: y > 100 ? { height: "60px" } : { height: "80px" },
+        children: /* @__PURE__ */ jsxs(NavInner, { className: "container flexSpaceCenter", children: [
+          /* @__PURE__ */ jsx("a", { href: "/accueil", className: "pointer flexNullCenter", children: /* @__PURE__ */ jsx(SvgComponent$1, {}) }),
+          /* @__PURE__ */ jsx(
+            BurderWrapper,
+            {
+              className: "pointer",
+              onClick: () => toggleSidebar(!sidebarOpen),
+              children: /* @__PURE__ */ jsx(SvgComponent, {})
+            }
+          ),
+          /* @__PURE__ */ jsxs(UlWrapper, { className: "flexNullCenter", children: [
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/accueil", style: { padding: "10px 15px" }, children: "Accueil" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/Forum", style: { padding: "10px 15px" }, children: "Forum" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/Activités", style: { padding: "10px 15px" }, children: "Activités" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/Contact", style: { padding: "10px 15px" }, children: "Nous connaître" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/adherer", style: { padding: "10px 15px" }, children: "Adhérer" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/Promouvoir", style: { padding: "10px 15px" }, children: "Promouvoir" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/apprendre", style: { padding: "10px 15px" }, children: "Apprendre" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/enseigner", style: { padding: "10px 15px" }, children: "Enseigner" }) }),
+            /* @__PURE__ */ jsx("li", { className: "semiBold font15 pointer", children: /* @__PURE__ */ jsx("a", { href: "/divers", style: { padding: "10px 15px" }, children: "Divers" }) })
+          ] })
+        ] })
+      }
+    )
+  ] });
+}
+const Wrapper$7 = styled.nav`
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+`;
+const NavInner = styled.div`
+  position: relative;
+  height: 100%;
+`;
+const BurderWrapper = styled.button`
+  outline: none;
+  border: 0px;
+  background-color: transparent;
+  height: 100%;
+  padding: 0 15px;
+  display: none;
+  @media (max-width: 760px) {
+    display: block;
+  }
+`;
+const UlWrapper = styled.ul`
+  display: flex;
+  @media (max-width: 760px) {
+    display: none;
+  }
+`;
 function Contact$1() {
   const getCurrentYear = () => {
     return (/* @__PURE__ */ new Date()).getFullYear();
   };
-  return /* @__PURE__ */ jsx(Wrapper$7, { children: /* @__PURE__ */ jsx("div", { className: "darkBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(InnerWrapper, { className: "flexSpaceCenter", style: { padding: "30px 0" }, children: [
+  return /* @__PURE__ */ jsx(Wrapper$6, { children: /* @__PURE__ */ jsx("div", { className: "darkBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(InnerWrapper, { className: "flexSpaceCenter", style: { padding: "30px 0" }, children: [
     /* @__PURE__ */ jsxs(Link, { className: "flexCenter animate pointer", to: "home", smooth: true, offset: -80, children: [
-      /* @__PURE__ */ jsx(SvgComponent, {}),
+      /* @__PURE__ */ jsx(SvgComponent$1, {}),
       /* @__PURE__ */ jsx("h1", { className: "font15 extraBold ", style: { marginLeft: "15px" }, children: "APIRP" })
     ] }),
     /* @__PURE__ */ jsxs(StyleP, { className: " font13", children: [
@@ -790,7 +1011,7 @@ function Contact$1() {
     /* @__PURE__ */ jsx(Link, { className: " animate pointer font13", onClick: () => window.scrollTo({ top: 0, behavior: "smooth" }), children: "Back to top" })
   ] }) }) }) });
 }
-const Wrapper$7 = styled.div`
+const Wrapper$6 = styled.div`
   width: 100%;
 `;
 const InnerWrapper = styled.div`
@@ -848,72 +1069,26 @@ const DiversPage = () => {
     )
   ] });
 };
-const route8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: DiversPage
 }, Symbol.toStringTag, { value: "Module" }));
-function BlogBox({ tag, title, text, action, author }) {
-  return /* @__PURE__ */ jsx(WrapperBtn, { className: "animate pointer", onClick: action ? () => action() : null, children: /* @__PURE__ */ jsxs(Wrapper$6, { className: "whiteBg radius8 shadow", children: [
-    /* @__PURE__ */ jsx("h3", { className: "font20 extraBold darkColor", children: title }),
-    /* @__PURE__ */ jsx("p", { className: "font13", style: { padding: "30px 0" }, children: text }),
-    /* @__PURE__ */ jsx("p", { className: "font13 extraBold", children: author }),
-    /* @__PURE__ */ jsx("div", { className: "flex", children: /* @__PURE__ */ jsx("p", { className: "tag coralBg radius6 font13 extraBold", children: tag }) })
-  ] }) });
-}
-const Wrapper$6 = styled.div`
-  width: 100%;
-  text-align: left;
-  padding: 20px 30px;
-  margin-top: 30px;
-`;
-const WrapperBtn = styled.button`
-  border: 0px;
-  outline: none;
-  background-color: transparent;
-  :hover {
-    opacity: 0.5;
-  }
-`;
-function FullButton({ title, action, border }) {
-  return /* @__PURE__ */ jsx(
-    Wrapper$5,
-    {
-      className: "animate pointer radius8",
-      onClick: action ? () => action() : null,
-      border,
-      children: title
-    }
-  );
-}
-const Wrapper$5 = styled.button`
-  border: 1px solid ${(props) => props.border ? "#7b151a" : "#CD212A"};
-  background-color: ${(props) => props.border ? "transparent" : "#CD212A"};
-  width: 100%;
-  padding: 15px;
-  outline: none;
-  color: ${(props) => props.border ? "#7b151a" : "#fff"};
-  :hover {
-    background-color: ${(props) => props.border ? "transparent" : "#7b151a"};
-    border: 1px solid #7b151a;
-    color: ${(props) => props.border ? "#CD212A" : "#fff"};
-  }
-`;
-const HeaderImage$3 = "/assets/Header-Activites-DwGlyY33.jpg";
+const HeaderImage$4 = "/assets/Header-Activites-DwGlyY33.jpg";
 function HeaderActivités() {
-  return /* @__PURE__ */ jsxs(HeaderWrapper$3, { className: "container flexSpaceCenter", children: [
-    /* @__PURE__ */ jsx(LeftSide$3, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
+  return /* @__PURE__ */ jsxs(HeaderWrapper$4, { className: "container flexSpaceCenter", children: [
+    /* @__PURE__ */ jsx(LeftSide$4, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
       /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
         /* @__PURE__ */ jsx("span", { className: "darkColor", children: "Activités" }),
         " culutrelles"
       ] }),
-      /* @__PURE__ */ jsx(HeaderP$3, { className: "font15", children: "Bienvenue sur notre page activités culturelles. Explorez la richesse culturelle italienne : concerts envoûtants, expositions captivantes, et littérature inspirante !     " }),
-      /* @__PURE__ */ jsx(BtnWrapper$2, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
+      /* @__PURE__ */ jsx(HeaderP$4, { className: "font15", children: "Bienvenue sur notre page activités culturelles. Explorez la richesse culturelle italienne : concerts envoûtants, expositions captivantes, et littérature inspirante !     " }),
+      /* @__PURE__ */ jsx(BtnWrapper$3, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
     ] }) }),
-    /* @__PURE__ */ jsx(RightSide$3, { children: /* @__PURE__ */ jsx(ImageWrapper$3, { children: /* @__PURE__ */ jsx(Img$3, { className: "radius8", src: HeaderImage$3, alt: "office", style: { zIndex: 9 } }) }) })
+    /* @__PURE__ */ jsx(RightSide$4, { children: /* @__PURE__ */ jsx(ImageWrapper$4, { children: /* @__PURE__ */ jsx(Img$4, { className: "radius8", src: HeaderImage$4, alt: "office", style: { zIndex: 9 } }) }) })
   ] });
 }
 function Activités() {
-  return /* @__PURE__ */ jsx(Wrapper$4, { children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsxs("div", { className: "container", children: [
+  return /* @__PURE__ */ jsx(Wrapper$5, { children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsxs("div", { className: "container", children: [
     /* @__PURE__ */ jsxs("div", { className: "row textCenter", children: [
       /* @__PURE__ */ jsx("div", { className: "col-xs-12 col-sm-4 col-md-4 col-lg-4", children: /* @__PURE__ */ jsx(
         BlogBox,
@@ -1002,10 +1177,143 @@ function Activités() {
     /* @__PURE__ */ jsx("div", { className: "row flexCenter", children: /* @__PURE__ */ jsx("div", { style: { margin: "50px 0", width: "200px" } }) })
   ] }) }) });
 }
-const Wrapper$4 = styled.section`
+const Wrapper$5 = styled.section`
   width: 100%;
   padding-top: 20px;
 `;
+const HeaderWrapper$4 = styled.section`
+  padding-top: 80px;
+  width: 100%;
+  min-height: 840px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+const LeftSide$4 = styled.div`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 2;
+    margin: 50px 0;
+    text-align: center;
+  }
+  @media (max-width: 560px) {
+    margin: 80px 0 50px 0;
+  }
+`;
+const RightSide$4 = styled.div`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 1;
+    margin-top: 30px;
+  }
+`;
+const HeaderP$4 = styled.div`
+  max-width: 470px;
+  padding: 15px 0 50px 0;
+  line-height: 1.5rem;
+  @media (max-width: 960px) {
+    padding: 15px 0 50px 0;
+    text-align: center;
+    max-width: 100%;
+  }
+`;
+const BtnWrapper$3 = styled.div`
+  max-width: 190px;
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
+`;
+styled.div`
+  width: 30%;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  @media (max-width: 960px) {
+    display: none;
+  }
+`;
+const ImageWrapper$4 = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 9;
+  @media (max-width: 960px) {
+    width: 100%;
+    justify-content: center;
+  }
+`;
+const Img$4 = styled.img`
+  @media (max-width: 560px) {
+    width: 80%;
+    height: auto;
+  }
+`;
+function ProjectBox({ img, title, text, action }) {
+  return /* @__PURE__ */ jsxs(Wrapper$4, { children: [
+    /* @__PURE__ */ jsx(ImgBtn, { className: "aniamte pointer", onClick: action ? () => action() : null, children: /* @__PURE__ */ jsx("img", { className: "radius8", src: img, alt: "project" }) }),
+    /* @__PURE__ */ jsx("h3", { className: "font20 extraBold", children: title }),
+    /* @__PURE__ */ jsx("p", { className: "font13", children: text })
+  ] });
+}
+const Wrapper$4 = styled.div`
+  width: 100%;
+  margin-top: 30px;
+  img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+  }
+  h3 {
+    padding-bottom: 10px;
+  }
+`;
+const ImgBtn = styled.button`
+  background-color: transparent;
+  border: 0px;
+  outline: none;
+  padding: 0px;
+  margin: 0px;
+  :hover > img {
+    opacity: 0.5;
+  }
+`;
+const ProjectImg1 = "/assets/bulletin1-DutwIJe6.png";
+const ProjectImg2 = "/assets/bulletin2-BDVmf7LQ.png";
+const ProjectImg3 = "/assets/bulletin3-Clx44Zdy.png";
+const ProjectImg4 = "/assets/bulletin4-CM_chRWs.png";
+const ProjectImg5 = "/assets/bulletin5-DDNWtWJ-.png";
+const ProjectImg6 = "/assets/bulletin6-f5FuQ2IO.png";
+const HeaderImage$3 = "/assets/Header-Contact-CpdXn06A.jpg";
+function Contact() {
+  return /* @__PURE__ */ jsxs(HeaderWrapper$3, { className: "container flexSpaceCenter", children: [
+    /* @__PURE__ */ jsx(LeftSide$3, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
+      /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
+        "Nous",
+        /* @__PURE__ */ jsx("span", { className: "darkColor", children: " contacter" })
+      ] }),
+      /* @__PURE__ */ jsxs(HeaderP$3, { className: "font15", children: [
+        "Pour nous signaler tout changement de coordonnées personnelles (adresse de domicile, téléphone, courriel) ou professionnelles (changement d’établissement de rattachement, de statut, etc.), merci d’envoyer un courriel à : ",
+        /* @__PURE__ */ jsx("span", { className: "semiBold", children: "apirp.association@gmail.com." }),
+        /* @__PURE__ */ jsx("br", {}),
+        "Pour les renouvellement d’adhésion et pour les commandes de plaquettes pour la promotion de l’italien, nos adhérents peuvent aussi se servir des formulaires publiés dans les deux dernières page de notre bulletin annuel."
+      ] }),
+      /* @__PURE__ */ jsx("h3", { children: "Mail : apirp.association@gmail.com" }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsxs("h3", { children: [
+        "Suivez nous sur ",
+        /* @__PURE__ */ jsx("a", { href: "https://m.facebook.com/APIRP/", target: "_blank", className: "darkColor", children: "Facebook" }),
+        " !"
+      ] })
+    ] }) }),
+    /* @__PURE__ */ jsx(RightSide$3, { children: /* @__PURE__ */ jsx(ImageWrapper$3, { children: /* @__PURE__ */ jsx(Img$3, { className: "radius8", src: HeaderImage$3, alt: "office", style: { zIndex: 9 } }) }) })
+  ] });
+}
 const HeaderWrapper$3 = styled.section`
   padding-top: 80px;
   width: 100%;
@@ -1046,12 +1354,6 @@ const HeaderP$3 = styled.div`
     max-width: 100%;
   }
 `;
-const BtnWrapper$2 = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
 styled.div`
   width: 30%;
   height: 700px;
@@ -1079,135 +1381,8 @@ const Img$3 = styled.img`
     height: auto;
   }
 `;
-function ProjectBox({ img, title, text, action }) {
-  return /* @__PURE__ */ jsxs(Wrapper$3, { children: [
-    /* @__PURE__ */ jsx(ImgBtn, { className: "aniamte pointer", onClick: action ? () => action() : null, children: /* @__PURE__ */ jsx("img", { className: "radius8", src: img, alt: "project" }) }),
-    /* @__PURE__ */ jsx("h3", { className: "font20 extraBold", children: title }),
-    /* @__PURE__ */ jsx("p", { className: "font13", children: text })
-  ] });
-}
-const Wrapper$3 = styled.div`
-  width: 100%;
-  margin-top: 30px;
-  img {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-  }
-  h3 {
-    padding-bottom: 10px;
-  }
-`;
-const ImgBtn = styled.button`
-  background-color: transparent;
-  border: 0px;
-  outline: none;
-  padding: 0px;
-  margin: 0px;
-  :hover > img {
-    opacity: 0.5;
-  }
-`;
-const ProjectImg1 = "/assets/bulletin1-DutwIJe6.png";
-const ProjectImg2 = "/assets/bulletin2-BDVmf7LQ.png";
-const ProjectImg3 = "/assets/bulletin3-Clx44Zdy.png";
-const ProjectImg4 = "/assets/bulletin4-CM_chRWs.png";
-const ProjectImg5 = "/assets/bulletin5-DDNWtWJ-.png";
-const ProjectImg6 = "/assets/bulletin6-f5FuQ2IO.png";
-const HeaderImage$2 = "/assets/Header-Contact-CpdXn06A.jpg";
-function Contact() {
-  return /* @__PURE__ */ jsxs(HeaderWrapper$2, { className: "container flexSpaceCenter", children: [
-    /* @__PURE__ */ jsx(LeftSide$2, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
-      /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
-        "Nous",
-        /* @__PURE__ */ jsx("span", { className: "darkColor", children: " contacter" })
-      ] }),
-      /* @__PURE__ */ jsxs(HeaderP$2, { className: "font15", children: [
-        "Pour nous signaler tout changement de coordonnées personnelles (adresse de domicile, téléphone, courriel) ou professionnelles (changement d’établissement de rattachement, de statut, etc.), merci d’envoyer un courriel à : ",
-        /* @__PURE__ */ jsx("span", { className: "semiBold", children: "apirp.association@gmail.com." }),
-        /* @__PURE__ */ jsx("br", {}),
-        "Pour les renouvellement d’adhésion et pour les commandes de plaquettes pour la promotion de l’italien, nos adhérents peuvent aussi se servir des formulaires publiés dans les deux dernières page de notre bulletin annuel."
-      ] }),
-      /* @__PURE__ */ jsx("h3", { children: "Mail : apirp.association@gmail.com" }),
-      /* @__PURE__ */ jsx("br", {}),
-      /* @__PURE__ */ jsxs("h3", { children: [
-        "Suivez nous sur ",
-        /* @__PURE__ */ jsx("a", { href: "https://m.facebook.com/APIRP/", target: "_blank", className: "darkColor", children: "Facebook" }),
-        " !"
-      ] })
-    ] }) }),
-    /* @__PURE__ */ jsx(RightSide$2, { children: /* @__PURE__ */ jsx(ImageWrapper$2, { children: /* @__PURE__ */ jsx(Img$2, { className: "radius8", src: HeaderImage$2, alt: "office", style: { zIndex: 9 } }) }) })
-  ] });
-}
-const HeaderWrapper$2 = styled.section`
-  padding-top: 80px;
-  width: 100%;
-  min-height: 840px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-`;
-const LeftSide$2 = styled.div`
-  width: 50%;
-  height: 100%;
-  @media (max-width: 960px) {
-    width: 100%;
-    order: 2;
-    margin: 50px 0;
-    text-align: center;
-  }
-  @media (max-width: 560px) {
-    margin: 80px 0 50px 0;
-  }
-`;
-const RightSide$2 = styled.div`
-  width: 50%;
-  height: 100%;
-  @media (max-width: 960px) {
-    width: 100%;
-    order: 1;
-    margin-top: 30px;
-  }
-`;
-const HeaderP$2 = styled.div`
-  max-width: 470px;
-  padding: 15px 0 50px 0;
-  line-height: 1.5rem;
-  @media (max-width: 960px) {
-    padding: 15px 0 50px 0;
-    text-align: center;
-    max-width: 100%;
-  }
-`;
-styled.div`
-  width: 30%;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
-const ImageWrapper$2 = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 9;
-  @media (max-width: 960px) {
-    width: 100%;
-    justify-content: center;
-  }
-`;
-const Img$2 = styled.img`
-  @media (max-width: 560px) {
-    width: 80%;
-    height: auto;
-  }
-`;
 function Assoc() {
-  return /* @__PURE__ */ jsx(Wrapper$2, { id: "projects", children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo$1, { children: [
+  return /* @__PURE__ */ jsx(Wrapper$3, { id: "projects", children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo$1, { children: [
     /* @__PURE__ */ jsx("h1", { className: "font40 extraBold darkColor", children: "L'association et ses statuts" }),
     /* @__PURE__ */ jsx("br", {}),
     /* @__PURE__ */ jsx("h1", { className: "font30 semiBold", children: "Présentation de l'APIRP: Association des Professeurs d'Italien de la Région Parisienn" }),
@@ -1239,7 +1414,7 @@ function Assoc() {
     ] })
   ] }) }) }) });
 }
-const Wrapper$2 = styled.section`
+const Wrapper$3 = styled.section`
   width: 100%;
   margin: 50px 0;
 `;
@@ -1249,7 +1424,7 @@ const HeaderInfo$1 = styled.div`
   }
 `;
 function Elu() {
-  return /* @__PURE__ */ jsx(Wrapper$2, { id: "projects", children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo$1, { children: [
+  return /* @__PURE__ */ jsx(Wrapper$3, { id: "projects", children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo$1, { children: [
     /* @__PURE__ */ jsx("h1", { className: "font40 extraBold darkColor", children: "Les élus au C.A." }),
     /* @__PURE__ */ jsx("br", {}),
     /* @__PURE__ */ jsx("h1", { className: "font30 semiBold", children: "Membres du C.A. et du Bureau élus le 16 mars 2019" }),
@@ -1342,7 +1517,7 @@ function Elu() {
   ] }) }) }) });
 }
 function Bulletin() {
-  return /* @__PURE__ */ jsx(Wrapper$2, { id: "projects", children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsxs("div", { className: "container", children: [
+  return /* @__PURE__ */ jsx(Wrapper$3, { id: "projects", children: /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsxs("div", { className: "container", children: [
     /* @__PURE__ */ jsxs(HeaderInfo$1, { children: [
       /* @__PURE__ */ jsx("h1", { className: "font40 extraBold darkColor", children: "Les bulletins de l'association" }),
       /* @__PURE__ */ jsx("br", {}),
@@ -1408,22 +1583,310 @@ function Bulletin() {
     ] })
   ] }) }) });
 }
-const AddImage2$1 = "/assets/Promouvoir-1-DzDcPPMT.jpg";
-const HeaderImage$1 = "/assets/Header-Promouvoir-B3wyvMh_.jpg";
+const AddImage2$2 = "/assets/Promouvoir-1-DzDcPPMT.jpg";
+const HeaderImage$2 = "/assets/Header-Promouvoir-B3wyvMh_.jpg";
 const AddImage3 = "/assets/Promouvoir-2-Cn_ZsLIt.jpg";
 function HeaderPromouvoir() {
-  return /* @__PURE__ */ jsxs(HeaderWrapper$1, { className: "container flexSpaceCenter", children: [
-    /* @__PURE__ */ jsx(LeftSide$1, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
+  return /* @__PURE__ */ jsxs(HeaderWrapper$2, { className: "container flexSpaceCenter", children: [
+    /* @__PURE__ */ jsx(LeftSide$2, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
       /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
         /* @__PURE__ */ jsx("span", { className: "darkColor", children: "Promouvoir" }),
         " l'italien"
       ] }),
-      /* @__PURE__ */ jsx(HeaderP$1, { className: "font15", children: "Bienvenue sur notre page promouvoir l'italien. Dans le paysage culturel et linguistique mondial, la langue italienne brille de sa propre lumière. Au cœur de cette vitalité linguistique se trouve l'engagement passionné de notre association dévouées à sa promotion." }),
+      /* @__PURE__ */ jsx(HeaderP$2, { className: "font15", children: "Bienvenue sur notre page promouvoir l'italien. Dans le paysage culturel et linguistique mondial, la langue italienne brille de sa propre lumière. Au cœur de cette vitalité linguistique se trouve l'engagement passionné de notre association dévouées à sa promotion." }),
+      /* @__PURE__ */ jsx(BtnWrapper$2, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
+    ] }) }),
+    /* @__PURE__ */ jsx(RightSide$2, { children: /* @__PURE__ */ jsx(ImageWrapper$2, { children: /* @__PURE__ */ jsx(Img$2, { className: "radius8", src: HeaderImage$2, alt: "office", style: { zIndex: 9 } }) }) })
+  ] });
+}
+const HeaderWrapper$2 = styled.section`
+  padding-top: 80px;
+  width: 100%;
+  min-height: 840px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+const LeftSide$2 = styled.div`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 2;
+    margin: 50px 0;
+    text-align: center;
+  }
+  @media (max-width: 560px) {
+    margin: 80px 0 50px 0;
+  }
+`;
+const RightSide$2 = styled.div`
+  width: 50%;
+  height: 100%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 1;
+    margin-top: 30px;
+  }
+`;
+const HeaderP$2 = styled.div`
+  max-width: 470px;
+  padding: 15px 0 50px 0;
+  line-height: 1.5rem;
+  @media (max-width: 960px) {
+    padding: 15px 0 50px 0;
+    text-align: center;
+    max-width: 100%;
+  }
+`;
+const BtnWrapper$2 = styled.div`
+  max-width: 190px;
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
+`;
+styled.div`
+  width: 30%;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  @media (max-width: 960px) {
+    display: none;
+  }
+`;
+const ImageWrapper$2 = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 9;
+  @media (max-width: 960px) {
+    width: 100%;
+    justify-content: center;
+  }
+`;
+const Img$2 = styled.img`
+  @media (max-width: 560px) {
+    width: 80%;
+    height: auto;
+  }
+`;
+function Promouvoir() {
+  return /* @__PURE__ */ jsxs(Wrapper$2, { id: "projects", children: [
+    /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo, { children: [
+      /* @__PURE__ */ jsx("h1", { className: "font40 extraBold", children: "La plaquette éditée par l'APIRP" }),
+      /* @__PURE__ */ jsxs("p", { className: "font15", children: [
+        " ",
+        /* @__PURE__ */ jsx("br", {}),
+        "L'APIRP a édité un dépliant pour la promotion de l'apprentissage de la langue italienne dans les établissements scolaires de l'Île-de-France."
+      ] })
+    ] }) }) }),
+    /* @__PURE__ */ jsx("div", { className: "lightBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising$2, { className: "flexSpaceCenter", children: [
+      /* @__PURE__ */ jsx(AddLeft$2, { children: /* @__PURE__ */ jsx(ImgWrapper$2, { className: "flexCenter", children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage2$2, alt: "add" }) }) }),
+      /* @__PURE__ */ jsx(AddRight$2, { children: /* @__PURE__ */ jsx(ImgWrapper$2, { className: "flexCenter", children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage3, alt: "add" }) }) })
+    ] }) }) }),
+    /* @__PURE__ */ jsx("div", { className: "lightBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising$2, { className: "flexSpaceCenter", children: [
+      /* @__PURE__ */ jsx(AddLeft$2, { children: /* @__PURE__ */ jsxs("h4", { className: "font15", children: [
+        " ",
+        /* @__PURE__ */ jsx("br", {}),
+        "Télécharger le bon de commande pour pouvoir commander les dépliants :"
+      ] }) }),
+      /* @__PURE__ */ jsx(AddRight$2, { children: /* @__PURE__ */ jsxs(ButtonsRow$2, { className: "flexNullCenter", style: { margin: "30px 0" }, children: [
+        /* @__PURE__ */ jsx("div", { style: { width: "190px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Adhérent", action: () => window.open("https://drive.google.com/file/d/0B34j4qalEtJsMGlEcmFFWlJmY1E/view?resourcekey=0-19mliwKeZAoPK9XBmNVPwg", "_blank") }) }),
+        /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Non adhérent", action: () => window.open("https://drive.google.com/file/d/0B34j4qalEtJsd2xZM3dxclI2UTg/view?resourcekey=0-AK-KZe_UzMKDFomtWhSyGA", "_blank") }) })
+      ] }) })
+    ] }) }) }),
+    /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo, { children: [
+      /* @__PURE__ */ jsx("h4", { className: "font15", children: "Réponses au Quizz de la plaquette" }),
+      /* @__PURE__ */ jsx(ButtonsRow$2, { className: "flexNullCenter", style: { margin: "30px 0" }, children: /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx("button", { className: "button1", onClick: () => window.open("https://drive.google.com/file/d/0B34j4qalEtJsd2psVS1tN3plaFU/view?resourcekey=0-nlUxtG1Hf7kOX6BhtZuY2w", "_blank"), children: " Les réponses " }) }) })
+    ] }) }) })
+  ] });
+}
+const Wrapper$2 = styled.section`
+  width: 100%;
+`;
+const HeaderInfo = styled.div`
+  @media (max-width: 860px) {
+    text-align: center;
+  }
+`;
+const Advertising$2 = styled.div`
+  padding: 100px 0 ;
+  margin: 50px 0;
+  position: relative;
+  @media (max-width: 1160px) {
+    padding: 60px 0 40px 0;
+    
+  }
+  @media (max-width: 860px) {
+    flex-direction: column;
+    padding: 30px 0 30px 0;
+    margin: 50px 0 50px 0;
+  }
+`;
+const ButtonsRow$2 = styled.div`
+  @media (max-width: 860px) {
+    justify-content: space-between;
+  }
+`;
+const AddLeft$2 = styled.div`
+  position: relative;
+  width: 50%;
+  p {
+    max-width: 475px;
+  }
+  @media (max-width: 860px) {
+    width: 80%;
+    order: 2;
+    text-align: center;
+    h2 {
+      line-height: 3rem;
+      margin: 15px 0;
+    }
+    p {
+      margin: 0 auto;
+    }
+  }
+`;
+const AddRight$2 = styled.div`
+  width: 50%;
+  
+  @media (max-width: 860px) {
+    width: 80%;
+    order: 2;
+  }
+`;
+const ImgWrapper$2 = styled.div`
+  width: 100%;
+  padding: 0 15%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 400px) {
+    padding: 0;
+  }
+`;
+const AddImage2$1 = "/assets/Forum-1-CW2hFb6N.jpg";
+const Programme21$1 = "/assets/Programme21-CvWhcx5L.jpg";
+const Programme20$1 = "/assets/Programme20-CIM70dMf.jpg";
+const HeaderImage$1 = "/assets/Header-Forum-CaCNw0xL.jpg";
+function HeaderForum$1() {
+  return /* @__PURE__ */ jsxs(HeaderWrapper$1, { className: "container flexSpaceCenter", children: [
+    /* @__PURE__ */ jsx(LeftSide$1, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
+      /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
+        /* @__PURE__ */ jsx("span", { className: "darkColor", children: "Forum" }),
+        " des associations franco-italiennes"
+      ] }),
+      /* @__PURE__ */ jsx(HeaderP$1, { className: "font15", children: "Bienvenue sur notre page forum des associastions. Découvrez le prochain forum des associations franco-italiennes et son programme." }),
       /* @__PURE__ */ jsx(BtnWrapper$1, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
     ] }) }),
     /* @__PURE__ */ jsx(RightSide$1, { children: /* @__PURE__ */ jsx(ImageWrapper$1, { children: /* @__PURE__ */ jsx(Img$1, { className: "radius8", src: HeaderImage$1, alt: "office", style: { zIndex: 9 } }) }) })
   ] });
 }
+function Forum$1() {
+  return /* @__PURE__ */ jsx(Wrapper$1, { children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising$1, { className: "flexSpaceCenter", children: [
+    /* @__PURE__ */ jsx(AddLeft$1, { children: /* @__PURE__ */ jsx(AddLeftInner$1, { children: /* @__PURE__ */ jsx(ImgWrapper$1, { className: "flexCenter", children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage2$1, alt: "" }) }) }) }),
+    /* @__PURE__ */ jsxs(AddRight$1, { children: [
+      /* @__PURE__ */ jsx("h4", { className: "font15 semiBold", children: "Forum des associations italiennes virtuel" }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsx("h2", { className: "font40 extraBold darkColor", children: "APIRP 2020" }),
+      /* @__PURE__ */ jsxs("p", { className: "font12", children: [
+        /* @__PURE__ */ jsx("br", {}),
+        "Le forum des associations franco-italiennes initialement prévu place Baudoyer à Paris, se déroulera cette année de façon virtuelle le 20 et 21 juin 2020. L' APIRP participera avec une intervention de Olivier Morin et Ilaria Madonna, président et vice-présidente de l'association, le samedi 20 juin de 16h30 à 16h50. Pour l'occasion Ilaria Madonna a créé un padlet pour illustrer les projets menés par l'APIRP, intitulé APIRP 2020."
+      ] }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsx("p", { className: "font12", children: " Vous y trouverez des renseignements sur la diffusion de l'enseignement de l'italien dans les trois académies franciliennes, des documents pour la promotion de notre belle langue, une vidéo pour présenter le bilan des activités de l'APIRP de cette année, le dossier ESABAC, le programme du concours de recrutement ainsi que des projets menés par nos adhérents." }),
+      /* @__PURE__ */ jsxs("p", { className: "font12", children: [
+        "Plus d'infos sur les",
+        /* @__PURE__ */ jsx("a", { href: "https://padlet.com/apirpassociation/apirp2020", children: " renseignements." })
+      ] }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsx("p", { className: "font12", children: "L'intégralité du forum sera retransmise sur la page Facebook du Forum des Associations italiennes. " }),
+      /* @__PURE__ */ jsxs(ButtonsRow$1, { className: "flexNullCenter", style: { margin: "30px 0" }, children: [
+        /* @__PURE__ */ jsx("div", { style: { width: "190px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Programme 20 juin", action: () => window.open(Programme20$1, "_blank") }) }),
+        /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Programme 21 juin", action: () => window.open(Programme21$1, "_blank") }) })
+      ] })
+    ] })
+  ] }) }) });
+}
+const Wrapper$1 = styled.section`
+  width: 100%;
+`;
+const Advertising$1 = styled.div`
+  padding: 100px 0;
+  margin: 100px 0;
+  position: relative;
+  @media (max-width: 1160px) {
+    padding: 60px 0 40px 0;
+  }
+  @media (max-width: 860px) {
+    flex-direction: column;
+    padding: 0 0 30px 0;
+    margin: 80px 0 0px 0;
+  }
+`;
+const ButtonsRow$1 = styled.div`
+  @media (max-width: 860px) {
+    justify-content: space-between;
+  }
+`;
+const AddLeft$1 = styled.div`
+  position: relative;
+  width: 50%;
+  p {
+    max-width: 475px;
+  }
+  @media (max-width: 860px) {
+    width: 80%;
+    order: 2;
+    text-align: center;
+    h2 {
+      line-height: 3rem;
+      margin: 15px 0;
+    }
+    p {
+      margin: 0 auto;
+    }
+  }
+`;
+const AddRight$1 = styled.div`
+  width: 50%;
+  @media (max-width: 860px) {
+    width: 80%;
+    order: 2;
+  }
+`;
+const AddLeftInner$1 = styled.div`
+  width: 100%;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  @media (max-width: 1190px) {
+    top: -250px;
+  }
+  @media (max-width: 920px) {
+    top: -200px;
+  }
+  @media (max-width: 860px) {
+    order: 1;
+    position: relative;
+    top: -60px;
+    left: 0;
+  }
+`;
+const ImgWrapper$1 = styled.div`
+  width: 100%;
+  padding: 0 15%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 400px) {
+    padding: 0;
+  }
+`;
 const HeaderWrapper$1 = styled.section`
   padding-top: 80px;
   width: 100%;
@@ -1497,294 +1960,6 @@ const Img$1 = styled.img`
     height: auto;
   }
 `;
-function Promouvoir() {
-  return /* @__PURE__ */ jsxs(Wrapper$1, { id: "projects", children: [
-    /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo, { children: [
-      /* @__PURE__ */ jsx("h1", { className: "font40 extraBold", children: "La plaquette éditée par l'APIRP" }),
-      /* @__PURE__ */ jsxs("p", { className: "font15", children: [
-        " ",
-        /* @__PURE__ */ jsx("br", {}),
-        "L'APIRP a édité un dépliant pour la promotion de l'apprentissage de la langue italienne dans les établissements scolaires de l'Île-de-France."
-      ] })
-    ] }) }) }),
-    /* @__PURE__ */ jsx("div", { className: "lightBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising$1, { className: "flexSpaceCenter", children: [
-      /* @__PURE__ */ jsx(AddLeft$1, { children: /* @__PURE__ */ jsx(ImgWrapper$1, { className: "flexCenter", children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage2$1, alt: "add" }) }) }),
-      /* @__PURE__ */ jsx(AddRight$1, { children: /* @__PURE__ */ jsx(ImgWrapper$1, { className: "flexCenter", children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage3, alt: "add" }) }) })
-    ] }) }) }),
-    /* @__PURE__ */ jsx("div", { className: "lightBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising$1, { className: "flexSpaceCenter", children: [
-      /* @__PURE__ */ jsx(AddLeft$1, { children: /* @__PURE__ */ jsxs("h4", { className: "font15", children: [
-        " ",
-        /* @__PURE__ */ jsx("br", {}),
-        "Télécharger le bon de commande pour pouvoir commander les dépliants :"
-      ] }) }),
-      /* @__PURE__ */ jsx(AddRight$1, { children: /* @__PURE__ */ jsxs(ButtonsRow$1, { className: "flexNullCenter", style: { margin: "30px 0" }, children: [
-        /* @__PURE__ */ jsx("div", { style: { width: "190px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Adhérent", action: () => window.open("https://drive.google.com/file/d/0B34j4qalEtJsMGlEcmFFWlJmY1E/view?resourcekey=0-19mliwKeZAoPK9XBmNVPwg", "_blank") }) }),
-        /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Non adhérent", action: () => window.open("https://drive.google.com/file/d/0B34j4qalEtJsd2xZM3dxclI2UTg/view?resourcekey=0-AK-KZe_UzMKDFomtWhSyGA", "_blank") }) })
-      ] }) })
-    ] }) }) }),
-    /* @__PURE__ */ jsx("div", { className: "whiteBg", children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(HeaderInfo, { children: [
-      /* @__PURE__ */ jsx("h4", { className: "font15", children: "Réponses au Quizz de la plaquette" }),
-      /* @__PURE__ */ jsx(ButtonsRow$1, { className: "flexNullCenter", style: { margin: "30px 0" }, children: /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx("button", { className: "button1", onClick: () => window.open("https://drive.google.com/file/d/0B34j4qalEtJsd2psVS1tN3plaFU/view?resourcekey=0-nlUxtG1Hf7kOX6BhtZuY2w", "_blank"), children: " Les réponses " }) }) })
-    ] }) }) })
-  ] });
-}
-const Wrapper$1 = styled.section`
-  width: 100%;
-`;
-const HeaderInfo = styled.div`
-  @media (max-width: 860px) {
-    text-align: center;
-  }
-`;
-const Advertising$1 = styled.div`
-  padding: 100px 0 ;
-  margin: 50px 0;
-  position: relative;
-  @media (max-width: 1160px) {
-    padding: 60px 0 40px 0;
-    
-  }
-  @media (max-width: 860px) {
-    flex-direction: column;
-    padding: 30px 0 30px 0;
-    margin: 50px 0 50px 0;
-  }
-`;
-const ButtonsRow$1 = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
-const AddLeft$1 = styled.div`
-  position: relative;
-  width: 50%;
-  p {
-    max-width: 475px;
-  }
-  @media (max-width: 860px) {
-    width: 80%;
-    order: 2;
-    text-align: center;
-    h2 {
-      line-height: 3rem;
-      margin: 15px 0;
-    }
-    p {
-      margin: 0 auto;
-    }
-  }
-`;
-const AddRight$1 = styled.div`
-  width: 50%;
-  
-  @media (max-width: 860px) {
-    width: 80%;
-    order: 2;
-  }
-`;
-const ImgWrapper$1 = styled.div`
-  width: 100%;
-  padding: 0 15%;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  @media (max-width: 400px) {
-    padding: 0;
-  }
-`;
-const AddImage2 = "/assets/Forum-1-CW2hFb6N.jpg";
-const Programme21 = "/assets/Programme21-CvWhcx5L.jpg";
-const Programme20 = "/assets/Programme20-CIM70dMf.jpg";
-const HeaderImage = "/assets/Header-Forum-CaCNw0xL.jpg";
-function HeaderForum() {
-  return /* @__PURE__ */ jsxs(HeaderWrapper, { className: "container flexSpaceCenter", children: [
-    /* @__PURE__ */ jsx(LeftSide, { className: "flexCenter", children: /* @__PURE__ */ jsxs("div", { children: [
-      /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
-        /* @__PURE__ */ jsx("span", { className: "darkColor", children: "Forum" }),
-        " des associations franco-italiennes"
-      ] }),
-      /* @__PURE__ */ jsx(HeaderP, { className: "font15", children: "Bienvenue sur notre page forum des associastions. Découvrez le prochain forum des associations franco-italiennes et son programme." }),
-      /* @__PURE__ */ jsx(BtnWrapper, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
-    ] }) }),
-    /* @__PURE__ */ jsx(RightSide, { children: /* @__PURE__ */ jsx(ImageWrapper, { children: /* @__PURE__ */ jsx(Img, { className: "radius8", src: HeaderImage, alt: "office", style: { zIndex: 9 } }) }) })
-  ] });
-}
-function Forum() {
-  return /* @__PURE__ */ jsx(Wrapper, { children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising, { className: "flexSpaceCenter", children: [
-    /* @__PURE__ */ jsx(AddLeft, { children: /* @__PURE__ */ jsx(AddLeftInner, { children: /* @__PURE__ */ jsx(ImgWrapper, { className: "flexCenter", children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage2, alt: "" }) }) }) }),
-    /* @__PURE__ */ jsxs(AddRight, { children: [
-      /* @__PURE__ */ jsx("h4", { className: "font15 semiBold", children: "Forum des associations italiennes virtuel" }),
-      /* @__PURE__ */ jsx("br", {}),
-      /* @__PURE__ */ jsx("h2", { className: "font40 extraBold darkColor", children: "APIRP 2020" }),
-      /* @__PURE__ */ jsxs("p", { className: "font12", children: [
-        /* @__PURE__ */ jsx("br", {}),
-        "Le forum des associations franco-italiennes initialement prévu place Baudoyer à Paris, se déroulera cette année de façon virtuelle le 20 et 21 juin 2020. L' APIRP participera avec une intervention de Olivier Morin et Ilaria Madonna, président et vice-présidente de l'association, le samedi 20 juin de 16h30 à 16h50. Pour l'occasion Ilaria Madonna a créé un padlet pour illustrer les projets menés par l'APIRP, intitulé APIRP 2020."
-      ] }),
-      /* @__PURE__ */ jsx("br", {}),
-      /* @__PURE__ */ jsx("p", { className: "font12", children: " Vous y trouverez des renseignements sur la diffusion de l'enseignement de l'italien dans les trois académies franciliennes, des documents pour la promotion de notre belle langue, une vidéo pour présenter le bilan des activités de l'APIRP de cette année, le dossier ESABAC, le programme du concours de recrutement ainsi que des projets menés par nos adhérents." }),
-      /* @__PURE__ */ jsxs("p", { className: "font12", children: [
-        "Plus d'infos sur les",
-        /* @__PURE__ */ jsx("a", { href: "https://padlet.com/apirpassociation/apirp2020", children: " renseignements." })
-      ] }),
-      /* @__PURE__ */ jsx("br", {}),
-      /* @__PURE__ */ jsx("p", { className: "font12", children: "L'intégralité du forum sera retransmise sur la page Facebook du Forum des Associations italiennes. " }),
-      /* @__PURE__ */ jsxs(ButtonsRow, { className: "flexNullCenter", style: { margin: "30px 0" }, children: [
-        /* @__PURE__ */ jsx("div", { style: { width: "190px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Programme 20 juin", action: () => window.open(Programme20, "_blank") }) }),
-        /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Programme 21 juin", action: () => window.open(Programme21, "_blank") }) })
-      ] })
-    ] })
-  ] }) }) });
-}
-const Wrapper = styled.section`
-  width: 100%;
-`;
-const Advertising = styled.div`
-  padding: 100px 0;
-  margin: 100px 0;
-  position: relative;
-  @media (max-width: 1160px) {
-    padding: 60px 0 40px 0;
-  }
-  @media (max-width: 860px) {
-    flex-direction: column;
-    padding: 0 0 30px 0;
-    margin: 80px 0 0px 0;
-  }
-`;
-const ButtonsRow = styled.div`
-  @media (max-width: 860px) {
-    justify-content: space-between;
-  }
-`;
-const AddLeft = styled.div`
-  position: relative;
-  width: 50%;
-  p {
-    max-width: 475px;
-  }
-  @media (max-width: 860px) {
-    width: 80%;
-    order: 2;
-    text-align: center;
-    h2 {
-      line-height: 3rem;
-      margin: 15px 0;
-    }
-    p {
-      margin: 0 auto;
-    }
-  }
-`;
-const AddRight = styled.div`
-  width: 50%;
-  @media (max-width: 860px) {
-    width: 80%;
-    order: 2;
-  }
-`;
-const AddLeftInner = styled.div`
-  width: 100%;
-  position: absolute;
-  top: -300px;
-  left: 0;
-  @media (max-width: 1190px) {
-    top: -250px;
-  }
-  @media (max-width: 920px) {
-    top: -200px;
-  }
-  @media (max-width: 860px) {
-    order: 1;
-    position: relative;
-    top: -60px;
-    left: 0;
-  }
-`;
-const ImgWrapper = styled.div`
-  width: 100%;
-  padding: 0 15%;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  @media (max-width: 400px) {
-    padding: 0;
-  }
-`;
-const HeaderWrapper = styled.section`
-  padding-top: 80px;
-  width: 100%;
-  min-height: 840px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-`;
-const LeftSide = styled.div`
-  width: 50%;
-  height: 100%;
-  @media (max-width: 960px) {
-    width: 100%;
-    order: 2;
-    margin: 50px 0;
-    text-align: center;
-  }
-  @media (max-width: 560px) {
-    margin: 80px 0 50px 0;
-  }
-`;
-const RightSide = styled.div`
-  width: 50%;
-  height: 100%;
-  @media (max-width: 960px) {
-    width: 100%;
-    order: 1;
-    margin-top: 30px;
-  }
-`;
-const HeaderP = styled.div`
-  max-width: 470px;
-  padding: 15px 0 50px 0;
-  line-height: 1.5rem;
-  @media (max-width: 960px) {
-    padding: 15px 0 50px 0;
-    text-align: center;
-    max-width: 100%;
-  }
-`;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
-styled.div`
-  width: 30%;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
-const ImageWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-  z-index: 9;
-  @media (max-width: 960px) {
-    width: 100%;
-    justify-content: center;
-  }
-`;
-const Img = styled.img`
-  @media (max-width: 560px) {
-    width: 80%;
-    height: auto;
-  }
-`;
 function Landing() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
     /* @__PURE__ */ jsx(TopNavbar, {}),
@@ -1792,8 +1967,8 @@ function Landing() {
       /* @__PURE__ */ jsx(Route, { path: "/accueil", element: /* @__PURE__ */ jsx(Accueil, {}) }),
       /* @__PURE__ */ jsx(Route, { path: "/", element: /* @__PURE__ */ jsx(Accueil, {}) }),
       /* @__PURE__ */ jsx(Route, { path: "Forum", element: /* @__PURE__ */ jsxs(Fragment, { children: [
-        /* @__PURE__ */ jsx(HeaderForum, {}),
-        /* @__PURE__ */ jsx(Forum, {})
+        /* @__PURE__ */ jsx(HeaderForum$1, {}),
+        /* @__PURE__ */ jsx(Forum$1, {})
       ] }) }),
       /* @__PURE__ */ jsx(Route, { path: "Activités", element: /* @__PURE__ */ jsxs(Fragment, { children: [
         /* @__PURE__ */ jsx(HeaderActivités, {}),
@@ -1817,7 +1992,7 @@ function Landing() {
     /* @__PURE__ */ jsx(Contact$1, {})
   ] });
 }
-const route7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Landing
 }, Symbol.toStringTag, { value: "Module" }));
@@ -1829,9 +2004,170 @@ function Index() {
     "   "
   ] });
 }
-const route10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: Index
+}, Symbol.toStringTag, { value: "Module" }));
+const AddImage2 = "/assets/img/Forum/Forum-1.jpg";
+const Programme21 = "/assets/img/Forum/Programme21.jpg";
+const Programme20 = "/assets/img/Forum/Programme20.jpg";
+const HeaderImage = "/assets/img/Forum/Header-Forum.jpg";
+function HeaderForum() {
+  return /* @__PURE__ */ jsxs(HeaderWrapper, { children: [
+    /* @__PURE__ */ jsx(LeftSide, { children: /* @__PURE__ */ jsxs("div", { children: [
+      /* @__PURE__ */ jsxs("h1", { className: "extraBold font60", children: [
+        /* @__PURE__ */ jsx("span", { className: "darkColor", children: "Forum" }),
+        " des associations franco-italiennes"
+      ] }),
+      /* @__PURE__ */ jsx(HeaderP, { children: "Bienvenue sur notre page forum des associations. Découvrez le prochain forum des associations franco-italiennes et son programme." }),
+      /* @__PURE__ */ jsx(BtnWrapper, { children: /* @__PURE__ */ jsx(FullButton, { title: "Voir Plus" }) })
+    ] }) }),
+    /* @__PURE__ */ jsx(RightSide, { children: /* @__PURE__ */ jsx(ImageWrapper, { children: /* @__PURE__ */ jsx(Img, { src: HeaderImage, alt: "Header Forum" }) }) })
+  ] });
+}
+function Forum() {
+  return /* @__PURE__ */ jsx(Wrapper, { children: /* @__PURE__ */ jsx("div", { className: "container", children: /* @__PURE__ */ jsxs(Advertising, { children: [
+    /* @__PURE__ */ jsx(AddLeft, { children: /* @__PURE__ */ jsx(AddLeftInner, { children: /* @__PURE__ */ jsx(ImgWrapper, { children: /* @__PURE__ */ jsx("img", { className: "radius8", src: AddImage2, alt: "Forum APIRP" }) }) }) }),
+    /* @__PURE__ */ jsxs(AddRight, { children: [
+      /* @__PURE__ */ jsx("h4", { className: "font15 semiBold", children: "Forum des associations italiennes virtuel" }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsx("h2", { className: "font40 extraBold darkColor", children: "APIRP 2020" }),
+      /* @__PURE__ */ jsxs("p", { className: "font12", children: [
+        /* @__PURE__ */ jsx("br", {}),
+        "Le forum des associations franco-italiennes initialement prévu place Baudoyer à Paris, se déroulera cette année de façon virtuelle le 20 et 21 juin 2020..."
+      ] }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsxs("p", { className: "font12", children: [
+        "Plus d'infos sur les ",
+        /* @__PURE__ */ jsx("a", { href: "https://padlet.com/apirpassociation/apirp2020", children: "renseignements" }),
+        "."
+      ] }),
+      /* @__PURE__ */ jsx("br", {}),
+      /* @__PURE__ */ jsx("p", { className: "font12", children: "L'intégralité du forum sera retransmise sur la page Facebook du Forum des Associations italiennes." }),
+      /* @__PURE__ */ jsxs(ButtonsRow, { children: [
+        /* @__PURE__ */ jsx("div", { style: { width: "190px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Programme 20 juin", action: () => window.open(Programme20, "_blank") }) }),
+        /* @__PURE__ */ jsx("div", { style: { width: "190px", marginLeft: "15px" }, children: /* @__PURE__ */ jsx(FullButton, { title: "Programme 21 juin", action: () => window.open(Programme21, "_blank") }) })
+      ] })
+    ] })
+  ] }) }) });
+}
+const Wrapper = styled.section`
+  width: 100%;
+`;
+const Advertising = styled.div`
+  padding: 100px 0;
+  margin: 100px 0;
+  position: relative;
+  display: flex;
+  @media (max-width: 860px) {
+    flex-direction: column;
+    padding: 0 0 30px 0;
+    margin: 80px 0 0px 0;
+  }
+`;
+const ButtonsRow = styled.div`
+  display: flex;
+  @media (max-width: 860px) {
+    justify-content: space-between;
+  }
+`;
+const AddLeft = styled.div`
+  position: relative;
+  width: 50%;
+  @media (max-width: 860px) {
+    width: 80%;
+    order: 2;
+    text-align: center;
+  }
+`;
+const AddRight = styled.div`
+  width: 50%;
+  @media (max-width: 860px) {
+    width: 80%;
+    order: 2;
+  }
+`;
+const AddLeftInner = styled.div`
+  width: 100%;
+  position: absolute;
+  top: -300px;
+  left: 0;
+  @media (max-width: 860px) {
+    order: 1;
+    position: relative;
+    top: -60px;
+    left: 0;
+  }
+`;
+const ImgWrapper = styled.div`
+  width: 100%;
+  padding: 0 15%;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 400px) {
+    padding: 0;
+  }
+`;
+const HeaderWrapper = styled.section`
+  padding-top: 80px;
+  width: 100%;
+  min-height: 840px;
+  display: flex;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+const LeftSide = styled.div`
+  width: 50%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    margin-top: 50px;
+  }
+`;
+const RightSide = styled.div`
+  width: 50%;
+  @media (max-width: 960px) {
+    width: 100%;
+    order: 1;
+  }
+`;
+const HeaderP = styled.div`
+  max-width: 470px;
+  padding: 15px 0 50px 0;
+  line-height: 1.5rem;
+  @media (max-width: 960px) {
+    padding: 15px 0;
+    text-align: center;
+    max-width: 100%;
+  }
+`;
+const BtnWrapper = styled.div`
+  max-width: 190px;
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
+`;
+const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 9;
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+`;
+const Img = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
+const route12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  Forum,
+  HeaderForum
 }, Symbol.toStringTag, { value: "Module" }));
 function App() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
@@ -1843,11 +2179,11 @@ function App() {
     /* @__PURE__ */ jsx(Landing, {})
   ] });
 }
-const route12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+const route14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   default: App
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-jePbo6YA.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-DFin8lYl.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": ["/assets/root-CTekCCfy.css"] }, "routes/UniversityTable": { "id": "routes/UniversityTable", "parentId": "root", "path": "UniversityTable", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/UniversityTable-Dd5ZzdPy.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Actualite": { "id": "routes/Actualite", "parentId": "root", "path": "Actualite", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Actualite-BVj-fC3Z.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Actualite-ZXzGM7KD.css"] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-9QUnScN9.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Apprendre-CWYniUMq.css", "/assets/Hero-BBsy4Mtl.css", "/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-HO4XZ4bN.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-DprSEBm8.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-Bm8zW_hb.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Landing": { "id": "routes/Landing", "parentId": "root", "path": "Landing", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Landing-_8y682BH.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-QHNDNYsI.js", "/assets/Accueil-DprSEBm8.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Apprendre-9QUnScN9.js", "/assets/Divers-DHfByKMh.js", "/assets/Enseigner-HO4XZ4bN.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-DHfByKMh.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/TabImg": { "id": "routes/TabImg", "parentId": "root", "path": "TabImg", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/TabImg-BpUhluWH.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/TabImg-hY5otYpG.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-DNhUUdqU.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Accueil-DprSEBm8.js", "/assets/TopNavbar-QHNDNYsI.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Hero": { "id": "routes/Hero", "parentId": "root", "path": "Hero", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Hero-BG-ONL33.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Hero-BBsy4Mtl.css"] }, "routes/App": { "id": "routes/App", "parentId": "root", "path": "App", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/App-CBOANRrF.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Landing-_8y682BH.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-QHNDNYsI.js", "/assets/Accueil-DprSEBm8.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Hero-BG-ONL33.js", "/assets/Apprendre-9QUnScN9.js", "/assets/UniversityTable-Dd5ZzdPy.js", "/assets/Divers-DHfByKMh.js", "/assets/Enseigner-HO4XZ4bN.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] } }, "url": "/assets/manifest-86313fe0.js", "version": "86313fe0" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-jePbo6YA.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-BI989UB9.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": ["/assets/root-BjYvBLLJ.css"] }, "routes/UniversityTable": { "id": "routes/UniversityTable", "parentId": "root", "path": "UniversityTable", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/UniversityTable-Dd5ZzdPy.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Activités": { "id": "routes/Activités", "parentId": "root", "path": "Activités", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activités-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Actualite": { "id": "routes/Actualite", "parentId": "root", "path": "Actualite", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Actualite-BVj-fC3Z.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Actualite-ZXzGM7KD.css"] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-9QUnScN9.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Apprendre-CWYniUMq.css", "/assets/Hero-BBsy4Mtl.css", "/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-HO4XZ4bN.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-DprSEBm8.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-Bm8zW_hb.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Landing": { "id": "routes/Landing", "parentId": "root", "path": "Landing", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Landing-DDuyYTeA.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-LrdPB6kw.js", "/assets/Accueil-DprSEBm8.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Apprendre-9QUnScN9.js", "/assets/Divers-DHfByKMh.js", "/assets/Enseigner-HO4XZ4bN.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-DHfByKMh.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/TabImg": { "id": "routes/TabImg", "parentId": "root", "path": "TabImg", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/TabImg-BpUhluWH.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/TabImg-hY5otYpG.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-C6lO903i.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Accueil-DprSEBm8.js", "/assets/TopNavbar-LrdPB6kw.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Hero": { "id": "routes/Hero", "parentId": "root", "path": "Hero", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Hero-BG-ONL33.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Hero-BBsy4Mtl.css"] }, "routes/App": { "id": "routes/App", "parentId": "root", "path": "App", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/App-44QyzLNe.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Landing-DDuyYTeA.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-LrdPB6kw.js", "/assets/Accueil-DprSEBm8.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Hero-BG-ONL33.js", "/assets/Apprendre-9QUnScN9.js", "/assets/UniversityTable-Dd5ZzdPy.js", "/assets/Divers-DHfByKMh.js", "/assets/Enseigner-HO4XZ4bN.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] } }, "url": "/assets/manifest-51aa5633.js", "version": "51aa5633" };
 const mode = "production";
 const assetsBuildDirectory = "build/client";
 const basename = "/";
@@ -1872,13 +2208,21 @@ const routes = {
     caseSensitive: void 0,
     module: route1
   },
+  "routes/Activités": {
+    id: "routes/Activités",
+    parentId: "root",
+    path: "Activités",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route2
+  },
   "routes/Actualite": {
     id: "routes/Actualite",
     parentId: "root",
     path: "Actualite",
     index: void 0,
     caseSensitive: void 0,
-    module: route2
+    module: route3
   },
   "routes/Apprendre": {
     id: "routes/Apprendre",
@@ -1886,7 +2230,7 @@ const routes = {
     path: "Apprendre",
     index: void 0,
     caseSensitive: void 0,
-    module: route3
+    module: route4
   },
   "routes/Enseigner": {
     id: "routes/Enseigner",
@@ -1894,7 +2238,7 @@ const routes = {
     path: "Enseigner",
     index: void 0,
     caseSensitive: void 0,
-    module: route4
+    module: route5
   },
   "routes/Accueil": {
     id: "routes/Accueil",
@@ -1902,7 +2246,7 @@ const routes = {
     path: "Accueil",
     index: void 0,
     caseSensitive: void 0,
-    module: route5
+    module: route6
   },
   "routes/Adherer": {
     id: "routes/Adherer",
@@ -1910,7 +2254,7 @@ const routes = {
     path: "Adherer",
     index: void 0,
     caseSensitive: void 0,
-    module: route6
+    module: route7
   },
   "routes/Landing": {
     id: "routes/Landing",
@@ -1918,7 +2262,7 @@ const routes = {
     path: "Landing",
     index: void 0,
     caseSensitive: void 0,
-    module: route7
+    module: route8
   },
   "routes/Divers": {
     id: "routes/Divers",
@@ -1926,7 +2270,7 @@ const routes = {
     path: "Divers",
     index: void 0,
     caseSensitive: void 0,
-    module: route8
+    module: route9
   },
   "routes/TabImg": {
     id: "routes/TabImg",
@@ -1934,7 +2278,7 @@ const routes = {
     path: "TabImg",
     index: void 0,
     caseSensitive: void 0,
-    module: route9
+    module: route10
   },
   "routes/_index": {
     id: "routes/_index",
@@ -1942,7 +2286,15 @@ const routes = {
     path: void 0,
     index: true,
     caseSensitive: void 0,
-    module: route10
+    module: route11
+  },
+  "routes/Forum": {
+    id: "routes/Forum",
+    parentId: "root",
+    path: "Forum",
+    index: void 0,
+    caseSensitive: void 0,
+    module: route12
   },
   "routes/Hero": {
     id: "routes/Hero",
@@ -1950,7 +2302,7 @@ const routes = {
     path: "Hero",
     index: void 0,
     caseSensitive: void 0,
-    module: route11
+    module: route13
   },
   "routes/App": {
     id: "routes/App",
@@ -1958,7 +2310,7 @@ const routes = {
     path: "App",
     index: void 0,
     caseSensitive: void 0,
-    module: route12
+    module: route14
   }
 };
 export {
