@@ -428,6 +428,14 @@ const route13 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   default: Hero
 }, Symbol.toStringTag, { value: "Module" }));
 const heroImage$2 = "/assets/italie_rome-DfKncSmr.jpg";
+const logoSorbonneNouvelle = "/assets/logo_UNI_SorbonneNouvelle-DT35wAam.png";
+const logoParisSorbonne = "/assets/logo_UNI_ParisSorbonne-DCP_aQzv.png";
+const logoIutStDenis = "/assets/logo_IUT_StDenis-DLWuYVZ3.png";
+const logoUpec = "/assets/logo_UNI_Upec-DtrI3mca.png";
+const logoParis8 = "/assets/logo_UNI_Paris8-DWcs8u0m.png";
+const logoNanterre = "/assets/logo_UNI_Nanterre-CIZ0OtZh.png";
+const logoStQuentin = "/assets/logo_UNI_StQuentin-hdILqE06.png";
+const logoEvry = "/assets/logo_UNI_Evry-pnGONrKu.png";
 const Apprendre = () => {
   const title = "Apprendre l'italien";
   const description = "Bienvenue sur notre page apprendre. Découvrez les façons d'apprendre la langue italienne en formation Post-BAC.";
@@ -435,102 +443,91 @@ const Apprendre = () => {
   const universitiesDataParis = [
     {
       name: "Université Paris 3 Sorbonne Nouvelle",
-      logo: require("../img/logo_UNI_SorbonneNouvelle.png"),
+      logo: logoSorbonneNouvelle,
       website: "https://www.exemple1.com",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsx("li", { children: "Licence LLCER d'italien" }),
-        /* @__PURE__ */ jsx("li", { children: "Licence Sciences du Langage - mineure Langues et civilisations européennes  (italien) " }),
-        /* @__PURE__ */ jsx("li", { children: "Licence d'anglais - mineure italien " }),
+        /* @__PURE__ */ jsx("li", { children: "Licence Sciences du Langage - mineure Langues et civilisations européennes (italien)" }),
+        /* @__PURE__ */ jsx("li", { children: "Licence d'anglais - mineure italien" }),
         /* @__PURE__ */ jsx("li", { children: "Master Études Italiennes (recherche)" }),
-        /* @__PURE__ */ jsx("li", { children: "Master MEEF (Métiers de l'enseignement, de l'éducation et de la formation) parcours italien" }),
-        /* @__PURE__ */ jsx("li", { children: "Master pro Échanges culturels France-Italie " }),
-        /* @__PURE__ */ jsx("li", { children: "Diplômes d'université :   DLCI  et DLCR" })
+        /* @__PURE__ */ jsx("li", { children: "Master MEEF parcours italien" }),
+        /* @__PURE__ */ jsx("li", { children: "Master pro Échanges culturels France-Italie" }),
+        /* @__PURE__ */ jsx("li", { children: "Diplômes d'université : DLCI et DLCR" })
       ] })
     },
     {
       name: "Université Paris IV-Sorbonne",
-      logo: require("../img/logo_UNI_ParisSorbonne.png"),
+      logo: logoParisSorbonne,
       website: "https://www.exemple2.com",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
-        /* @__PURE__ */ jsx("li", { children: "Deux parcours de spécialité (1. Littérature et culture ; 2. Langue et Traduction)" }),
-        /* @__PURE__ */ jsx("li", { children: "Quatre bi-licences (Italien-Histoire ; Italien-Lettres modernes ; Italien-Lettres modernes appliquées ; Italien-Musicologie)" }),
-        /* @__PURE__ */ jsx("li", { children: "Master recherche en Études italiennes (Littérature, Culture, Arts du spectacle et Traduction) " }),
-        /* @__PURE__ */ jsx("li", { children: "Master recherche international en Études italiennes en co-diplomation avec l’Université La Sapienza de Rome" })
+        /* @__PURE__ */ jsx("li", { children: "Deux parcours de spécialité : Littérature et culture / Langue et Traduction" }),
+        /* @__PURE__ */ jsx("li", { children: "Bi-licences : Italien-Histoire, Lettres modernes, Musicologie…" }),
+        /* @__PURE__ */ jsx("li", { children: "Master recherche Études italiennes" }),
+        /* @__PURE__ */ jsx("li", { children: "Master international en co-diplomation avec La Sapienza (Rome)" })
       ] })
     }
-    // Ajoute d'autres universités si nécessaire
   ];
   const universitiesDataCreteil = [
     {
-      name: " I.U.T. de Saint Denis - Campus de La Plaine",
-      logo: require("../img/logo_IUT_StDenis.png"),
-      website: "www.iutsd.univ-paris13.fr",
+      name: "I.U.T. de Saint Denis - Campus de La Plaine",
+      logo: logoIutStDenis,
+      website: "https://www.iutsd.univ-paris13.fr",
       courses: /* @__PURE__ */ jsx("ul", { children: /* @__PURE__ */ jsx("li", { children: "Cursus Techniques de commercialisation" }) })
     },
     {
       name: "Paris Est Créteil Val de Marne (Paris XII)",
-      logo: require("../img/logo_UNI_Upec.png"),
+      logo: logoUpec,
       website: "http://www.u-pec.fr/",
       courses: /* @__PURE__ */ jsx("ul", { children: /* @__PURE__ */ jsx("li", { children: "LEA : Langues Étrangères Appliquées" }) })
     },
     {
       name: "Université Vincennes-Saint-Denis (Paris VIII)",
-      logo: require("../img/logo_UNI_Paris8.png"),
+      logo: logoParis8,
       website: "https://univ-paris8.fr",
-      courses: /* @__PURE__ */ jsxs("ul", { children: [
-        /* @__PURE__ */ jsx("li", { children: "UFR langues, littératures, civilisations étrangères - langues étrangères appliquées" }),
-        /* @__PURE__ */ jsx("li", { children: "(UFR LLCE italien -LEA anglais -italien, allemand-italien, espagnol-italien)" })
-      ] })
+      courses: /* @__PURE__ */ jsx("ul", { children: /* @__PURE__ */ jsx("li", { children: "UFR LLCE italien, LEA anglais-italien, allemand-italien, espagnol-italien" }) })
     }
-    // Ajoute d'autres universités si nécessaire
   ];
   const universitiesDataVersailles = [
     {
       name: "Université Paris X Nanterre",
-      logo: require("../img/logo_UNI_Nanterre.png"),
+      logo: logoNanterre,
       website: "https://dep-italien.parisnanterre.fr",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsxs("li", { children: [
-          "LLCER  (Licence mention langues, littératures et civilisations étrangères et régionales)",
+          "LLCER (Licence langues, littératures et civilisations étrangères)",
           /* @__PURE__ */ jsxs("ul", { children: [
-            /* @__PURE__ */ jsx("li", { children: "Double licence (délivrance de deux diplômes français) en Études italiennes et Etudes anglo-américaines ou en Études italiennes et Géographie et aménagement" }),
-            /* @__PURE__ */ jsx("li", { children: "Licence en double diplôme (délivrance d'un diplôme français et d'un diplôme italien)" }),
-            /* @__PURE__ */ jsx("li", { children: "Licence en Études italiennes" }),
-            /* @__PURE__ */ jsx("li", { children: 'Licence en "Études Européennes et Internationales" (LEEI)' }),
-            /* @__PURE__ */ jsx("li", { children: "Master Études Romanes-Italien" }),
-            /* @__PURE__ */ jsx("li", { children: "Master Parcours International" }),
-            /* @__PURE__ */ jsx("li", { children: "Master Parcours International en Double diplôme" })
+            /* @__PURE__ */ jsx("li", { children: "Double licence : Études italiennes + Anglo-américaines / Géographie" }),
+            /* @__PURE__ */ jsx("li", { children: "Double diplôme franco-italien" }),
+            /* @__PURE__ */ jsx("li", { children: "Licence Études Européennes et Internationales" }),
+            /* @__PURE__ */ jsx("li", { children: "Master Études Romanes-Italien, Master Parcours International" })
           ] })
         ] }),
         /* @__PURE__ */ jsx("li", { children: "Licence et Master Droit français – Droit italien" }),
-        /* @__PURE__ */ jsx("li", { children: " D.U. (Diplôme d'Université) Italien: Culture et communication professionnelle " }),
-        /* @__PURE__ */ jsx("li", { children: " LEA (Langues étrangères appliquées) : Anglais-Italien" }),
-        /* @__PURE__ */ jsx("li", { children: "Préparation au CELI (Certificat de connaissance de la langue italienne)" }),
+        /* @__PURE__ */ jsx("li", { children: "DU Italien : Culture et communication pro" }),
+        /* @__PURE__ */ jsx("li", { children: "LEA Anglais-Italien" }),
+        /* @__PURE__ */ jsx("li", { children: "Préparation au CELI" }),
         /* @__PURE__ */ jsx("li", { children: "Doctorat en études italiennes" })
       ] })
     },
     {
-      name: " Université de Versailles / Saint Quentin",
-      logo: require("../img/logo_UNI_StQuentin.png"),
+      name: "Université de Versailles / Saint Quentin",
+      logo: logoStQuentin,
       website: "http://www.uvsq.fr/",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsx("li", { children: "Licence Anglais / Droit" }),
-        /* @__PURE__ */ jsx("li", { children: "Licence LLCE Anglais" }),
-        /* @__PURE__ */ jsx("li", { children: "Licence LLCE Espagnol" }),
-        /* @__PURE__ */ jsx("li", { children: "Licence de Lettres modernes" }),
-        /* @__PURE__ */ jsx("li", { children: "Licence de Géographie" })
+        /* @__PURE__ */ jsx("li", { children: "LLCE Anglais / Espagnol" }),
+        /* @__PURE__ */ jsx("li", { children: "Lettres modernes, Géographie" })
       ] })
     },
     {
-      name: " Université d’Evry Val d’Essonne",
-      logo: require("../img/logo_UNI_Evry.png"),
+      name: "Université d’Evry Val d’Essonne",
+      logo: logoEvry,
       website: "http://www.univ-evry.fr/",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
-        /* @__PURE__ */ jsx("li", { children: "LEA : Langues étrangères appliquées (jusqu’au Master) en tant que langue complémentaire (LV3)" }),
-        /* @__PURE__ */ jsx("li", { children: "Licence d’Histoire (en tant que LV1 ou enseignement complémentaire)" })
+        /* @__PURE__ */ jsx("li", { children: "LEA en langue complémentaire (LV3)" }),
+        /* @__PURE__ */ jsx("li", { children: "Licence d’Histoire (en LV1 ou complémentaire)" })
       ] })
     }
-    // Ajoute d'autres universités si nécessaire
   ];
   return /* @__PURE__ */ jsxs("div", { className: "apprendre-container", children: [
     /* @__PURE__ */ jsx(
@@ -543,11 +540,11 @@ const Apprendre = () => {
       }
     ),
     /* @__PURE__ */ jsx("h2", { className: "h2-titre", children: "Apprendre l'italien après le BAC" }),
-    /* @__PURE__ */ jsx("h3", { className: "h3-Sections", children: "Académie de Paris universités" }),
+    /* @__PURE__ */ jsx("h3", { className: "h3-Sections", children: "Académie de Paris" }),
     universitiesDataParis.map((university, index) => /* @__PURE__ */ jsx(UniversityTable, { university }, index)),
-    /* @__PURE__ */ jsx("h3", { className: "h3-Sections", children: "Académie de Créteil universités" }),
+    /* @__PURE__ */ jsx("h3", { className: "h3-Sections", children: "Académie de Créteil" }),
     universitiesDataCreteil.map((university, index) => /* @__PURE__ */ jsx(UniversityTable, { university }, index)),
-    /* @__PURE__ */ jsx("h3", { className: "h3-Sections", children: "Académie de Versailles universités" }),
+    /* @__PURE__ */ jsx("h3", { className: "h3-Sections", children: "Académie de Versailles" }),
     universitiesDataVersailles.map((university, index) => /* @__PURE__ */ jsx(UniversityTable, { university }, index))
   ] });
 };
@@ -1024,6 +1021,7 @@ const StyleP = styled.p`
     margin: 20px 0;
   }
 `;
+const paysageItalie = "/assets/paysage_italie-CoEiSM_X.jpg";
 const DiversPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -1062,7 +1060,7 @@ const DiversPage = () => {
     /* @__PURE__ */ jsx(
       "img",
       {
-        src: require("../img/paysage_italie.jpg"),
+        src: paysageItalie,
         alt: "Image d'illustration",
         className: "login-image img"
       }
@@ -2008,10 +2006,10 @@ const route11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   __proto__: null,
   default: Index
 }, Symbol.toStringTag, { value: "Module" }));
-const AddImage2 = "/assets/img/Forum/Forum-1.jpg";
-const Programme21 = "/assets/img/Forum/Programme21.jpg";
-const Programme20 = "/assets/img/Forum/Programme20.jpg";
-const HeaderImage = "/assets/img/Forum/Header-Forum.jpg";
+const AddImage2 = "public/assets/img/Forum/Forum-1.jpg";
+const Programme21 = "public/assets/img/Forum/Programme21.jpg";
+const Programme20 = "public/assets/img/Forum/Programme20.jpg";
+const HeaderImage = "public/assets/img/Forum/Header-Forum.jpg";
 function HeaderForum() {
   return /* @__PURE__ */ jsxs(HeaderWrapper, { children: [
     /* @__PURE__ */ jsx(LeftSide, { children: /* @__PURE__ */ jsxs("div", { children: [
@@ -2167,7 +2165,8 @@ const Img = styled.img`
 const route12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Forum,
-  HeaderForum
+  HeaderForum,
+  default: Forum
 }, Symbol.toStringTag, { value: "Module" }));
 function App() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
@@ -2183,7 +2182,7 @@ const route14 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   __proto__: null,
   default: App
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-jePbo6YA.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-BI989UB9.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": ["/assets/root-BjYvBLLJ.css"] }, "routes/UniversityTable": { "id": "routes/UniversityTable", "parentId": "root", "path": "UniversityTable", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/UniversityTable-Dd5ZzdPy.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Activités": { "id": "routes/Activités", "parentId": "root", "path": "Activités", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activités-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Actualite": { "id": "routes/Actualite", "parentId": "root", "path": "Actualite", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Actualite-BVj-fC3Z.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Actualite-ZXzGM7KD.css"] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-9QUnScN9.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Apprendre-CWYniUMq.css", "/assets/Hero-BBsy4Mtl.css", "/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-HO4XZ4bN.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-DprSEBm8.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-Bm8zW_hb.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Landing": { "id": "routes/Landing", "parentId": "root", "path": "Landing", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Landing-DDuyYTeA.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-LrdPB6kw.js", "/assets/Accueil-DprSEBm8.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Apprendre-9QUnScN9.js", "/assets/Divers-DHfByKMh.js", "/assets/Enseigner-HO4XZ4bN.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-DHfByKMh.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/TabImg": { "id": "routes/TabImg", "parentId": "root", "path": "TabImg", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/TabImg-BpUhluWH.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/TabImg-hY5otYpG.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-C6lO903i.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Accueil-DprSEBm8.js", "/assets/TopNavbar-LrdPB6kw.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Hero": { "id": "routes/Hero", "parentId": "root", "path": "Hero", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Hero-BG-ONL33.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Hero-BBsy4Mtl.css"] }, "routes/App": { "id": "routes/App", "parentId": "root", "path": "App", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/App-44QyzLNe.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Landing-DDuyYTeA.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-LrdPB6kw.js", "/assets/Accueil-DprSEBm8.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Hero-BG-ONL33.js", "/assets/Apprendre-9QUnScN9.js", "/assets/UniversityTable-Dd5ZzdPy.js", "/assets/Divers-DHfByKMh.js", "/assets/Enseigner-HO4XZ4bN.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] } }, "url": "/assets/manifest-51aa5633.js", "version": "51aa5633" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-jePbo6YA.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-BI989UB9.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js"], "css": ["/assets/root-BjYvBLLJ.css"] }, "routes/UniversityTable": { "id": "routes/UniversityTable", "parentId": "root", "path": "UniversityTable", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/UniversityTable-Dd5ZzdPy.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Activités": { "id": "routes/Activités", "parentId": "root", "path": "Activités", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activités-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Actualite": { "id": "routes/Actualite", "parentId": "root", "path": "Actualite", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Actualite-BVj-fC3Z.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Actualite-ZXzGM7KD.css"] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-DrvD-yAy.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Apprendre-CWYniUMq.css", "/assets/Hero-BBsy4Mtl.css", "/assets/UniversityTable-MeSmwAN3.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-HO4XZ4bN.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-DprSEBm8.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-Bm8zW_hb.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Hero-BG-ONL33.js"], "css": ["/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Landing": { "id": "routes/Landing", "parentId": "root", "path": "Landing", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Landing-BVchPpT2.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-COywNm-b.js", "/assets/emotion-styled.browser.esm-D8RG6Lbq.js", "/assets/Accueil-DprSEBm8.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Apprendre-DrvD-yAy.js", "/assets/Divers-CR8rP--A.js", "/assets/Enseigner-HO4XZ4bN.js", "/assets/FullButton-D7qn1QlG.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Hero-BG-ONL33.js", "/assets/UniversityTable-Dd5ZzdPy.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-CR8rP--A.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/TabImg": { "id": "routes/TabImg", "parentId": "root", "path": "TabImg", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/TabImg-BpUhluWH.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/TabImg-hY5otYpG.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-BuvBG_Dm.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Accueil-DprSEBm8.js", "/assets/TopNavbar-COywNm-b.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/emotion-styled.browser.esm-D8RG6Lbq.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css"] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-Bl_-vdpb.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/emotion-styled.browser.esm-D8RG6Lbq.js", "/assets/FullButton-D7qn1QlG.js"], "css": [] }, "routes/Hero": { "id": "routes/Hero", "parentId": "root", "path": "Hero", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Hero-BG-ONL33.js", "imports": ["/assets/index-7zqVQZSl.js"], "css": ["/assets/Hero-BBsy4Mtl.css"] }, "routes/App": { "id": "routes/App", "parentId": "root", "path": "App", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/App-CW-DwMTo.js", "imports": ["/assets/index-7zqVQZSl.js", "/assets/Landing-BVchPpT2.js", "/assets/components-D6J0LBW7.js", "/assets/TopNavbar-COywNm-b.js", "/assets/emotion-styled.browser.esm-D8RG6Lbq.js", "/assets/Accueil-DprSEBm8.js", "/assets/TabImg-BpUhluWH.js", "/assets/Actualite-BVj-fC3Z.js", "/assets/Adherer-Bm8zW_hb.js", "/assets/Hero-BG-ONL33.js", "/assets/Apprendre-DrvD-yAy.js", "/assets/UniversityTable-Dd5ZzdPy.js", "/assets/Divers-CR8rP--A.js", "/assets/Enseigner-HO4XZ4bN.js", "/assets/FullButton-D7qn1QlG.js"], "css": ["/assets/Accueil-DTHATmQB.css", "/assets/TabImg-hY5otYpG.css", "/assets/Actualite-ZXzGM7KD.css", "/assets/Adherer-BzAI7wnX.css", "/assets/Hero-BBsy4Mtl.css", "/assets/Apprendre-CWYniUMq.css", "/assets/UniversityTable-MeSmwAN3.css", "/assets/Divers-Deborqjc.css", "/assets/Enseigner-DZu4l4pG.css"] } }, "url": "/assets/manifest-45860689.js", "version": "45860689" };
 const mode = "production";
 const assetsBuildDirectory = "build/client";
 const basename = "/";

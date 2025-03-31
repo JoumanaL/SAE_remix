@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../style/Divers.css';
+import paysageItalie from '../img/paysage_italie.jpg';
+
 
 const DiversPage = () => {
   const [username, setUsername] = useState('');
@@ -36,10 +38,11 @@ const DiversPage = () => {
       </form>
       {/* Image ajoutée pour l'esthétique */}
       <img
-        src={require('../img/paysage_italie.jpg')}
-        alt="Image d'illustration"
-        className="login-image img"
-      />
+  src={paysageItalie}
+  alt="Image d'illustration"
+  className="login-image img"
+/>
+
     </div>
   );
 };

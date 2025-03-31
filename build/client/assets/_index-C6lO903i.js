@@ -1,1 +1,0 @@
-import{j as r}from"./index-7zqVQZSl.js";import o from"./Accueil-DprSEBm8.js";import{T as t}from"./TopNavbar-LrdPB6kw.js";import"./TabImg-BpUhluWH.js";import"./Actualite-BVj-fC3Z.js";function a(){return r.jsxs(r.Fragment,{children:[r.jsx(t,{})," ",r.jsx(o,{}),"   "]})}export{a as default};
