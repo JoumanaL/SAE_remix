@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../style/Divers.css';
-import paysageItalie from '../img/paysage_italie.jpg';
+import '../styles/Divers.css';
+import paysageItalie from '../assets/img/paysage_italie.jpg';
 
 
 const DiversPage = () => {

@@ -1,1 +1,0 @@
-import{j as s}from"./index-7zqVQZSl.js";const c=({imageUrl:a,imageAlt:t,title:e,description:i})=>s.jsxs("div",{className:"tab-img-container",children:[s.jsx("img",{src:a,alt:t,className:"tab-img"}),s.jsxs("div",{className:"tab-content",children:[s.jsx("h2",{children:e}),s.jsx("p",{children:i})]})]});export{c as default};

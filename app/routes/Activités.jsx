@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "@emotion/styled";
 // Components
-import BlogBox from "./Elements/BlogBox";
-import FullButton from "./Buttons/FullButton";
+import BlogBox from "../components/Elements/BlogBox";
+import FullButton from "../components/Buttons/FullButton";
 //Assets
-import HeaderImage from "../../public/assets/img/Activites/Header-Activites.jpg";
+import HeaderImage from "../assets/img/Activites/Header-Activites.jpg";
 
 export function HeaderActivités() {
 

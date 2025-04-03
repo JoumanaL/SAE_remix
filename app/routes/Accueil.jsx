@@ -1,8 +1,8 @@
 import React from 'react';
-import '../style/Accueil.css';
-import TabImg from './TabImg';
-import Actualite from './Actualite'; // Composant d'actualité
-import image from '../img/drapeau_italie2.jpg'; // Cette image peut rester en import si elle est dans app/img
+import '../styles/Accueil.css';
+import TabImg from '../components/TabImg';
+import Actualite from '../components/Elements/Actualite'; // Composant d'actualité
+import image from '../assets/img/drapeau_italie2.jpg'; // Cette image peut rester en import si elle est dans app/img
 
 
 
@@ -34,7 +34,7 @@ const Accueil = () => {
         />
       </div>
 
-      <img className="img" src="/img/Italie_icon.png" alt="Icône Italie" />
+      <img className="img" src="../assets/img/Italie_icon.png" alt="Icône Italie" />
 
       <div className="accueil-container1">
         <h2 className="txt2">Exploration culturelle : Plongée au cœur de l'Italie avec l'Association des Professeurs d'Italien de la Région Parisienne</h2>
@@ -52,7 +52,7 @@ const Accueil = () => {
         <div className="actualite-container">
           <div className="actualite-box">
             <Actualite
-              image="/img/DivinaComedia.jpg"
+              image="../assets/img/DivinaComedia.jpg"
               title="La Divina Commedia"
               description="Con tutto si può giocare, anche con Dante Alighieri..."
               url="https://www.lastampa.it/cultura/2021/01/21/news/la-divina-commedia-diventa-un-gioco-da-tavolo-come-quello-dell-oca-1.39802733"
@@ -61,7 +61,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/zerocalcare.jpg"
+              image="../assets/img/zerocalcare.jpg"
               title="Zerocalcare sur Netflix"
               description="L'arrivo della serie animata di Zerocalcare su Netflix..."
               url="https://youtu.be/c0p3iwtw9tU"
@@ -70,7 +70,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/greenPea.jpg"
+              image="../assets/img/greenPea.jpg"
               title="Green Pea apre a Torino l’8 dicembre"
               description="L’attesissimo centre commercial éco-responsable..."
               url="https://www.gamberorosso.it/notizie/green-pea-apre-a-torino-l8-dicembre-ecco-cose-la-scommessa-ecologica-di-farinetti/"
@@ -79,7 +79,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/sergio.jpg"
+              image="../assets/img/sergio.jpg"
               title="Sergio Mattarella: «Dante, notre contemporain»"
               description="La musique pour rendre hommage au Sommo poeta..."
               url="https://www.corriere.it/cultura/20_ottobre_03/sergio-mattarella-dante-nostro-contemporaneo-cosi-sua-voce-parla-futuro-5416bf66-05a5-11eb-867c-57744a2cabe2.shtml"
@@ -88,7 +88,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/dal.jpg"
+              image="../assets/img/dal.jpg"
               title="Dal 2021 riapre le Corridoio Vasarian"
               description="Une gemme du patrimoine artistique italien rouvre enfin..."
               url="https://it.businessinsider.com/corridoio-vasariano-firenze-palazzo-vecchio-uffici-palazzo-pitti-ponte-vecchio-2021-riapertura/"
@@ -97,7 +97,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/raffaelloSuperstar.jpg"
+              image="../assets/img/raffaelloSuperstar.jpg"
               title="Raffaello superstar à Rome"
               description="La plus grande exposition jamais dédiée à Raffaello..."
               url="https://roma.repubblica.it/cronaca/2019/12/25/news/raffaello_superstar_a_roma_la_piu_grande_mostra_con_cento_capolavori-244337923/"
@@ -106,7 +106,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/lupi.jpg"
+              image="../assets/img/lupi.jpg"
               title="I lupi di Liu Ruowang à Naples"
               description="Cento lupi en métal assiègent la place Municipio..."
               url="http://www.rainews.it/dl/rainews/media/Cento-lupi-in-piazza-Municipio-a-Napoli-la-natura-che-si-ribella-all-uomo-7a4ad6e0-29a7-42ed-824b-d74e0b326cab.html#foto-3"
@@ -115,7 +115,7 @@ const Accueil = () => {
 
           <div className="actualite-box">
             <Actualite
-              image="/img/portata.jpg"
+              image="../assets/img/portata.jpg"
               title="Une villa romaine révélée à Enna"
               description="Les fouilles ont mis au jour une autre villa impressionnante..."
               url="http://www.custonaciweb.it/portata-alla-luce-unaltra-villa-romana-a-enna-si-trova-a-15-km-dalla-villa-del-casale-di-piazza-armerina/"
