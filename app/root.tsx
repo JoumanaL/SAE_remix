@@ -4,17 +4,18 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLocation,
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
+// Composants globaux
 import TopNavbar from "./components/Nav/TopNavbar";
-import Footer from "./components/Sections/Footer"; 
-import Header from "./components/Sections/Header"; 
+import Footer from "./components/Sections/Footer";
 
-
+// CSS global
+import indexStyles from "./styles/index.css";
 
 export const links: LinksFunction = () => [
+  // Google Fonts
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -23,29 +24,25 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
+  // CSS local
+  { rel: "stylesheet", href: indexStyles },
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  const location = useLocation();
-
   return (
     <html lang="fr">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{ fontFamily: "'Inter', sans-serif", margin: 0 }}>
         <TopNavbar />
-
-        {/* Affiche Header uniquement sur la page accueil */}
-        {location.pathname === "/accueil" && <Header />}
-
-        <main>{children}</main>
-
+        {children}
         <Footer />
-
         <ScrollRestoration />
         <Scripts />
       </body>
