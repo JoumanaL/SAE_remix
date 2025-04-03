@@ -3,11 +3,15 @@ import styled from "@emotion/styled";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-const AddImage2 = "/img/Forum/Forum-1.jpg";
-const Programme21 = "/img/Forum/Programme21.jpg";
-const Programme20 = "/img/Forum/Programme20.jpg";
-const HeaderImage = "/img/Forum/Header-Forum.jpg";
+import AddImage2 from "../../assets/img/Forum/Forum-1.jpg";
 
+const Programme20 = "assets/img/Forum/Programme20.jpg";
+const Programme21 = "assets/img/Forum/Programme21.jpg";
+
+
+
+
+import HeaderImage from "../../assets/img/Forum/Header-Forum.jpg";
 
 
 export function HeaderForum() {
@@ -59,10 +63,10 @@ export function Forum() {
               <p className="font12">L'intégralité du forum sera retransmise sur la page Facebook du Forum des Associations italiennes. </p>  
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
                 <div style={{ width: "190px" }}>
-                  <FullButton title="Programme 20 juin" action={() => window.open(Programme20, '_blank')} />
+                <FullButton title="Programme 20 juin" action={() => window.open(Programme20, '_blank')} />
                 </div>
                 <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Programme 21 juin" action={() => window.open(Programme21, '_blank')}  />
+                <FullButton title="Programme 21 juin" action={() => window.open(Programme21, '_blank')} />
                 </div>
               </ButtonsRow>
             </AddRight>

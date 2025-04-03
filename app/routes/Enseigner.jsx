@@ -1,7 +1,9 @@
 import React from 'react'
 import Hero from '../components/Hero.jsx';
-import heroImage from '../img/img-venise.jpg';
 import '../styles/Enseigner.css';
+
+// Image hero (dans public)
+const heroImage = "/assets/img/img-venise.jpg";
 
 const Enseigner = () => {
 

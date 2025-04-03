@@ -9,7 +9,10 @@ const ProjectImg3 = "/img/projects/bulletin3.png";
 const ProjectImg4 = "/img/projects/bulletin4.png";
 const ProjectImg5 = "/img/projects/bulletin5.png";
 const ProjectImg6 = "/img/projects/bulletin6.png";
-const HeaderImage = "/img/Contact/Header-Contact.jpg";
+
+
+import HeaderImage from "../../assets/img/Contact/Header-Contact.jpg";
+
 
 export function Contact() {
   return (

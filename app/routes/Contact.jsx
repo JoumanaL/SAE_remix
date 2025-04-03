@@ -1,6 +1,15 @@
 import React from "react";
-import Contact from "../components/Sections/Contact"; // si `export default Contact`
+import {  Contact, Assoc, Elu, Bulletin } from "../components/Sections/Contact"; // si exporté comme nommé
 
 export default function ContactPage() {
-  return <Contact />;
+   return (
+     <>
+
+       <Contact />
+       <Assoc />
+       <Elu />
+       <Bulletin/>
+     </>
+   );
+
 }
