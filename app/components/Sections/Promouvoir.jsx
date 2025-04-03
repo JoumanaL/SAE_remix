@@ -237,3 +237,5 @@ const ImgWrapper = styled.div`
     padding: 0;
   }
 `;
+
+export default Promouvoir;

@@ -23,17 +23,17 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
           </a>
         </li>
         <li className="semiBold font15 pointer">
-          <a href="Forum" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
+          <a href="/forum" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
             Forum
           </a>
         </li>
         <li className="semiBold font15 pointer">
-          <a href="Activités" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
+          <a href="/Activites" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
             Activités
           </a>
         </li>
         <li className="semiBold font15 pointer">
-          <a href="Contact" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
+          <a href="/contact" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
             Nous connaître
           </a>
         </li>
@@ -43,7 +43,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
           </a>
         </li>
         <li className="semiBold font15 pointer">
-          <a href="Promouvoir" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
+          <a href="/promouvoir" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
             Promouvoir
           </a>
         </li>

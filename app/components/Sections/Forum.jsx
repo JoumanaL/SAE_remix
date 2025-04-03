@@ -224,3 +224,4 @@ const Img = styled.img`
     height: auto;
   }
 `;
+export default Forum;

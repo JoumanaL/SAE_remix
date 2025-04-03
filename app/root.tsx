@@ -1,3 +1,4 @@
+
 import {
   Links,
   Meta,
@@ -9,6 +10,8 @@ import type { LinksFunction } from "@remix-run/node";
 
 // Composants globaux
 import TopNavbar from "./components/Nav/TopNavbar";
+import SideBar from "./components/Nav/Sidebar";
+
 import Footer from "./components/Sections/Footer";
 
 // CSS global

@@ -47,7 +47,7 @@ export default function TopNavbar() {
               <a href="/Forum" style={{ padding: "10px 15px" }}>Forum</a>
             </li>
             <li className="semiBold font15 pointer">
-              <a href="/Activités" style={{ padding: "10px 15px" }}>Activités</a>
+              <a href="/Activites" style={{ padding: "10px 15px" }}>Activités</a>
             </li>
             <li className="semiBold font15 pointer">
               <a href="/Contact" style={{ padding: "10px 15px" }}>Nous connaître</a>

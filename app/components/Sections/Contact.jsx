@@ -2,14 +2,14 @@ import React from "react";
 import styled from "@emotion/styled";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
-// Assets
-import ProjectImg1 from "../../assets/img/projects/bulletin1.png";
-import ProjectImg2 from "../../assets/img/projects/bulletin2.png";
-import ProjectImg3 from "../../assets/img/projects/bulletin3.png";
-import ProjectImg4 from "../../assets/img/projects/bulletin4.png";
-import ProjectImg5 from "../../assets/img/projects/bulletin5.png";
-import ProjectImg6 from "../../assets/img/projects/bulletin6.png";
-import HeaderImage from "../../assets/img/Contact/Header-Contact.jpg";
+// Images stockées dans /public/img
+const ProjectImg1 = "/img/projects/bulletin1.png";
+const ProjectImg2 = "/img/projects/bulletin2.png";
+const ProjectImg3 = "/img/projects/bulletin3.png";
+const ProjectImg4 = "/img/projects/bulletin4.png";
+const ProjectImg5 = "/img/projects/bulletin5.png";
+const ProjectImg6 = "/img/projects/bulletin6.png";
+const HeaderImage = "/img/Contact/Header-Contact.jpg";
 
 export function Contact() {
   return (
@@ -243,3 +243,4 @@ export function Bulletin() {
     </Wrapper>
   );
 }
+export default Contact;
