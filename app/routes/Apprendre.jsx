@@ -2,17 +2,18 @@ import React from 'react';
 import Hero from '../components/Hero.jsx';
 import UniversityTable from '../components/UniversityTable';
 import '../styles/Apprendre.css';
-import heroImage from '../assets/img/italie_rome.jpg';
+// Image hero (dans public)
+const heroImage = "/assets/img/italie_rome.jpg";
 
-// Import des logos (depuis app/img/, pas public !)
-import logoSorbonneNouvelle from '../assets/img/logo_UNI_SorbonneNouvelle.png';
-import logoParisSorbonne from '../assets/img/logo_UNI_ParisSorbonne.png';
-import logoIutStDenis from '../assets/img/logo_IUT_StDenis.png';
-import logoUpec from '../assets/img/logo_UNI_Upec.png';
-import logoParis8 from '../assets/img/logo_UNI_Paris8.png';
-import logoNanterre from '../assets/img/logo_UNI_Nanterre.png';
-import logoStQuentin from '../assets/img/logo_UNI_StQuentin.png';
-import logoEvry from '../assets/img/logo_UNI_Evry.png';
+// Logos des universités (dans public)
+const logoSorbonneNouvelle = "/assets/img/logo_UNI_SorbonneNouvelle.png";
+const logoParisSorbonne = "/assets/img/logo_UNI_ParisSorbonne.png";
+const logoIutStDenis = "/assets/img/logo_IUT_StDenis.png";
+const logoUpec = "/assets/img/logo_UNI_Upec.png";
+const logoParis8 = "/assets/img/logo_UNI_Paris8.png";
+const logoNanterre = "/assets/img/logo_UNI_Nanterre.png";
+const logoStQuentin = "/assets/img/logo_UNI_StQuentin.png";
+const logoEvry = "/assets/img/logo_UNI_Evry.png";
 
 const Apprendre = () => {
   const title = "Apprendre l'italien";

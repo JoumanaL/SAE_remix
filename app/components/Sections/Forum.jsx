@@ -3,10 +3,10 @@ import styled from "@emotion/styled";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage2 from "../../assets/img/Forum/Forum-1.jpg";
-import Programme21 from "../../assets/img/Forum/Programme21.jpg";
-import Programme20 from "../../assets/img/Forum/Programme20.jpg";
-import HeaderImage from "../../assets/img/Forum/Header-Forum.jpg";
+const AddImage2 = "/img/Forum/Forum-1.jpg";
+const Programme21 = "/img/Forum/Programme21.jpg";
+const Programme20 = "/img/Forum/Programme20.jpg";
+const HeaderImage = "/img/Forum/Header-Forum.jpg";
 
 
 

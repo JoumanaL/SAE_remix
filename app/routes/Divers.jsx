@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Divers.css';
-import paysageItalie from '../assets/img/paysage_italie.jpg';
 
+// Image servie depuis /public
+const paysageItalie = "/assets/img/paysage_italie.jpg";
 
 const DiversPage = () => {
   const [username, setUsername] = useState('');
