@@ -63,9 +63,89 @@ const Adherer = () => {
                 <p className='p'>Pour devenir membres il faut : remplir une fiche d’inscription ET verser annuellement une cotisation, dont le montant est fixé chaque année par le Conseil d’administration.</p>
 
                 <button className="button" onClick={() => window.open(FicheAdhesionPDF, '_blank')}>Télécharger la fiche d'adhésion</button>
-            </div>
+                
+
+
+
+                
+                <form className="formulaire-adhesion" onSubmit={(e) => e.preventDefault()}>
+  <div className="form-row">
+    <label className="p">Nom :</label>
+    <input type="text" name="nom" className="input" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Prénom :</label>
+    <input type="text" name="prenom" className="input" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Adresse :</label>
+    <input type="text" name="adresse" className="input" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Code postal :</label>
+    <input type="text" name="code_postal" className="input input-small" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Ville :</label>
+    <input type="text" name="ville" className="input" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Adresse e-mail :</label>
+    <input type="email" name="email" className="input" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Téléphone :</label>
+    <input type="tel" name="telephone" className="input" required />
+  </div>
+
+  <div className="form-row">
+    <label className="p">Fonction / Établissement :</label>
+    <input type="text" name="fonction" className="input" />
+  </div>
+
+
+
+
+
+{/* Paiement PayPal */}
+
+  {/* Bouton PayPal à personnaliser */}
+  {/* 
+    Pour obtenir le vôtre :
+      1. Créez un compte PayPal Business
+      2. Allez dans "Outils" > "Créer un bouton de paiement"
+      3. Choisissez "Don", entrez le nom, montant, etc.
+      4. Copiez le code HTML généré et remplacez le bloc ci-dessous
+  */}
+
+<div className="paypal-section">
+  <h3 className="h3">Paiement de la cotisation</h3>
+  <p className="p">Cliquez sur le bouton ci-dessous pour payer votre cotisation en ligne :</p>
+
+  {/* Remplace ce lien par TON lien PayPal */}
+  <a
+    href="https://www.paypal.com/donate?hosted_button_id=TON_ID_PAYPAL"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <img
+      src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif"
+      alt="Pay with PayPal"
+    />
+  </a>
+</div>
+<button type="submit" className="button">Envoyer</button>
+</form>
+            </div>      
             
         </div>
+
     );
 }
 
