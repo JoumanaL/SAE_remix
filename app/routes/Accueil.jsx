@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/Accueil.css';
 import TabImg from '../components/TabImg';
 import Actualite from '../components/Elements/Actualite'; // Composant d'actualité
-import image from '../assets/img/drapeau_italie2.jpg'; // Cette image peut rester en import si elle est dans app/img
+
+const image = "assets/img/drapeau_italie2.jpg";
 
 
 

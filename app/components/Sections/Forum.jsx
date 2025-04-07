@@ -3,15 +3,10 @@ import styled from "@emotion/styled";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage2 from "../../assets/img/Forum/Forum-1.jpg";
-
-const Programme20 = "assets/img/Forum/Programme20.jpg";
-const Programme21 = "assets/img/Forum/Programme21.jpg";
-
-
-
-
-import HeaderImage from "../../assets/img/Forum/Header-Forum.jpg";
+const AddImage2 = "assets/img/Forum/Forum-1.jpg";
+const HeaderImage = "assets/img/Forum/Header-Forum.jpg";
+const Programme20 = "/img/Forum/Programme20.jpg";
+const Programme21 = "/assets/img/Forum/Programme21.jpg";
 
 
 export function HeaderForum() {
@@ -68,13 +63,17 @@ export function Forum() {
                 <div style={{ width: "190px", marginLeft: "15px" }}>
                 <FullButton title="Programme 21 juin" action={() => window.open(Programme21, '_blank')} />
                 </div>
+                
               </ButtonsRow>
             </AddRight>
           </Advertising>
         </div>
     </Wrapper>
+    
   );
 }
+
+
 
 
 const Wrapper = styled.section`
