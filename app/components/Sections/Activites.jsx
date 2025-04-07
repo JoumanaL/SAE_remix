@@ -3,8 +3,7 @@ import styled from "@emotion/styled";
 // Components
 import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
-//Assets
-import HeaderImage from "../../assets/img/Activites/Header-Activites.jpg";
+
 
 export function HeaderActivites() {
 
@@ -24,7 +23,7 @@ export function HeaderActivites() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src="/assets/img/Activites/Header-Activites.jpg" alt="office" style={{zIndex: 9}} />
         </ImageWrapper>
       
       </RightSide>

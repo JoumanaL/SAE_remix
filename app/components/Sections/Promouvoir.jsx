@@ -2,10 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 // Components
 import FullButton from "../Buttons/FullButton";
-// Assets
-import AddImage2 from "../../assets/img/Promouvoir/Promouvoir-1.jpg";
-import HeaderImage from "../../assets/img/Promouvoir/Header-Promouvoir.jpg";
-import AddImage3 from "../../assets/img/Promouvoir/Promouvoir-2.jpg";
+
 
 export function HeaderPromouvoir() {
   return (
@@ -24,7 +21,7 @@ export function HeaderPromouvoir() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src="/assets/img/Promouvoir/Header-Promouvoir.jpg" alt="office" style={{zIndex: 9}} />
         </ImageWrapper>
  
       </RightSide>
@@ -123,12 +120,13 @@ export function Promouvoir() {
           <Advertising className="flexSpaceCenter">
             <AddLeft>
                 <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage2} alt="add" />
+                  <img className="radius8" src="/assets/img/Promouvoir/Promouvoir-1.jpg" alt="add" /> 
+
                 </ImgWrapper>
             </AddLeft>
             <AddRight>
             <ImgWrapper className="flexCenter">
-                  <img className="radius8" src={AddImage3} alt="add" />
+                  <img className="radius8" src="/assets/img/Promouvoir/Promouvoir-2.jpg" alt="add" />
             </ImgWrapper>
             </AddRight>
           </Advertising>

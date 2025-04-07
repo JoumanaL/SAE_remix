@@ -3,15 +3,12 @@ import styled from "@emotion/styled";
 // Components
 import ProjectBox from "../Elements/ProjectBox";
 // Images stockées dans /public/img
-const ProjectImg1 = "/img/projects/bulletin1.png";
-const ProjectImg2 = "/img/projects/bulletin2.png";
-const ProjectImg3 = "/img/projects/bulletin3.png";
-const ProjectImg4 = "/img/projects/bulletin4.png";
-const ProjectImg5 = "/img/projects/bulletin5.png";
-const ProjectImg6 = "/img/projects/bulletin6.png";
-
-
-import HeaderImage from "../../assets/img/Contact/Header-Contact.jpg";
+const ProjectImg1 = "assets/img/projects/bulletin1.png";
+const ProjectImg2 = "assets/img/projects/bulletin2.png";
+const ProjectImg3 = "assets/img/projects/bulletin3.png";
+const ProjectImg4 = "assets/img/projects/bulletin4.png";
+const ProjectImg5 = "assets/img/projects/bulletin5.png";
+const ProjectImg6 = "assets/img/projects/bulletin6.png";
 
 
 export function Contact() {
@@ -32,7 +29,7 @@ export function Contact() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8" src={HeaderImage} alt="office" style={{zIndex: 9}} />
+          <Img className="radius8" src="/assets/img/Contact/Header-Contact.jpg" alt="office" style={{zIndex: 9}} />
         </ImageWrapper>
        
       </RightSide>

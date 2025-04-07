@@ -12,11 +12,8 @@ import TopNavbar from "./components/Nav/TopNavbar";
 import Footer from "./components/Sections/Footer";
 
 // CSS global
-import indexStyles from "./styles/index.css";
+import "./styles/index.css"; // ✅ juste comme ça
 
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: indexStyles },
-];
 
 export default function App() {
   return (
