@@ -8,7 +8,7 @@ const TabImg = ({ imageUrl, imageAlt, title, description }) => {
             
             <div className="tab-content">
                 <h2>{title}</h2>
-                <p>{description}</p>
+                <div>{description}</div>
             </div>
         </div>
     );

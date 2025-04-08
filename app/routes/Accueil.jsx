@@ -3,7 +3,6 @@ import '../styles/Accueil.css';
 import TabImg from '../components/TabImg';
 import Actualite from '../components/Elements/Actualite'; // Composant d'actualité
 
-const image = "assets/img/drapeau_italie2.jpg";
 
 
 
@@ -22,7 +21,7 @@ const Accueil = () => {
         <h1 className="h1">Bienvenue sur le site de l'Association des Professeurs d'Italien de la Région Parisienne</h1>
 
         <TabImg
-          imageUrl={image}
+          imageUrl="assets/img/drapeau_italie2.jpg"
           imageAlt="Drapeau italien"
           title="Notre association a pour vocation :"
           description={
@@ -35,7 +34,7 @@ const Accueil = () => {
         />
       </div>
 
-      <img className="img" src="../assets/img/Italie_icon.png" alt="Icône Italie" />
+      <img className="img" src="assets/img/Italie_icon.png" alt="Icône Italie" />
 
       <div className="accueil-container1">
         <h2 className="txt2">Exploration culturelle : Plongée au cœur de l'Italie avec l'Association des Professeurs d'Italien de la Région Parisienne</h2>

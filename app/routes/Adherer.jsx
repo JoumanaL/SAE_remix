@@ -10,16 +10,15 @@ const Adherer = () => {
     const description = "Bienvenue sur notre page d'adhésion. Découvrez les avantages de devenir membre de notre association.";
     const buttonText = "Commencer";
 
-    const handleScrollToContent = () => {}
-        // Fonction pour faire défiler la page vers la partie suivante
+const handleScrollToContent = () => {};
 
-    const handleScrollToSection = (event, sectionId) => {
-        event.preventDefault();
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+  const handleScrollToSection = (event, sectionId) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
     return (
         <div className="adherer-container">

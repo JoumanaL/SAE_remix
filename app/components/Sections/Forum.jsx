@@ -5,7 +5,7 @@ import FullButton from "../Buttons/FullButton";
 // Assets
 const AddImage2 = "assets/img/Forum/Forum-1.jpg";
 const HeaderImage = "assets/img/Forum/Header-Forum.jpg";
-const Programme20 = "/img/Forum/Programme20.jpg";
+const Programme20 = "/assets/img/Forum/Programme20.jpg";
 const Programme21 = "/assets/img/Forum/Programme21.jpg";
 
 

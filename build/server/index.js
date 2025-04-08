@@ -781,7 +781,8 @@ const UniversityTable = ({ university }) => {
     ] }),
     /* @__PURE__ */ jsxs("div", { className: "university-column", children: [
       /* @__PURE__ */ jsx("h4", { className: "h4", children: "Cursus proposés" }),
-      /* @__PURE__ */ jsx("p", { children: university.courses })
+      /* @__PURE__ */ jsx("div", { className: "courses", children: university.courses }),
+      "            "
     ] })
   ] });
 };
@@ -963,11 +964,11 @@ const TabImg = ({ imageUrl, imageAlt, title, description }) => {
     /* @__PURE__ */ jsx("img", { src: imageUrl, alt: imageAlt, className: "tab-img" }),
     /* @__PURE__ */ jsxs("div", { className: "tab-content", children: [
       /* @__PURE__ */ jsx("h2", { children: title }),
-      /* @__PURE__ */ jsx("p", { children: description })
+      /* @__PURE__ */ jsx("div", { children: description })
     ] })
   ] });
 };
-const Actualite = ({ image: image2, title, description, url }) => {
+const Actualite = ({ image, title, description, url }) => {
   const maxTitleLength = 50;
   const trimmedTitle = title.length > maxTitleLength ? title.substring(0, maxTitleLength) + "..." : title;
   const maxDescriptionLength = 250;
@@ -975,13 +976,12 @@ const Actualite = ({ image: image2, title, description, url }) => {
   return /* @__PURE__ */ jsxs("a", { href: url, target: "_blank", rel: "noopener noreferrer", className: "actualite-link", children: [
     " ",
     /* @__PURE__ */ jsxs("div", { className: "actualite", children: [
-      /* @__PURE__ */ jsx("img", { src: image2, alt: title, className: "actualite-image" }),
+      /* @__PURE__ */ jsx("img", { src: image, alt: title, className: "actualite-image" }),
       /* @__PURE__ */ jsx("h3", { className: "actualite-title", children: trimmedTitle }),
       /* @__PURE__ */ jsx("p", { className: "actualite-description", children: trimmedDescription })
     ] })
   ] });
 };
-const image = "assets/img/drapeau_italie2.jpg";
 const Accueil = () => {
   return /* @__PURE__ */ jsxs("div", { className: "accueil-container", children: [
     /* @__PURE__ */ jsx("div", { className: "hero", children: /* @__PURE__ */ jsx("div", { className: "hero-content" }) }),
@@ -990,7 +990,7 @@ const Accueil = () => {
       /* @__PURE__ */ jsx(
         TabImg,
         {
-          imageUrl: image,
+          imageUrl: "assets/img/drapeau_italie2.jpg",
           imageAlt: "Drapeau italien",
           title: "Notre association a pour vocation :",
           description: /* @__PURE__ */ jsxs("ul", { children: [
@@ -1010,7 +1010,7 @@ const Accueil = () => {
         }
       )
     ] }),
-    /* @__PURE__ */ jsx("img", { className: "img", src: "../assets/img/Italie_icon.png", alt: "Icône Italie" }),
+    /* @__PURE__ */ jsx("img", { className: "img", src: "assets/img/Italie_icon.png", alt: "Icône Italie" }),
     /* @__PURE__ */ jsxs("div", { className: "accueil-container1", children: [
       /* @__PURE__ */ jsx("h2", { className: "txt2", children: "Exploration culturelle : Plongée au cœur de l'Italie avec l'Association des Professeurs d'Italien de la Région Parisienne" }),
       /* @__PURE__ */ jsx("p", { className: "txt", children: "Nous sommes également des défenseurs de la diversité linguistique et culturelle. En promouvant l'enseignement de l'italien, nous contribuons à l'enrichissement de la palette linguistique de la région parisienne..." })
@@ -1607,7 +1607,7 @@ const route9 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
 }, Symbol.toStringTag, { value: "Module" }));
 const AddImage2 = "assets/img/Forum/Forum-1.jpg";
 const HeaderImage = "assets/img/Forum/Header-Forum.jpg";
-const Programme20 = "/img/Forum/Programme20.jpg";
+const Programme20 = "/assets/img/Forum/Programme20.jpg";
 const Programme21 = "/assets/img/Forum/Programme21.jpg";
 function HeaderForum() {
   return /* @__PURE__ */ jsxs(HeaderWrapper, { className: "container flexSpaceCenter", children: [
@@ -1807,7 +1807,7 @@ const route10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   __proto__: null,
   default: ForumPage
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-Cp_qPLvg.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-BFOaCRWr.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": ["/assets/root-DPCjUYno.css"] }, "routes/Promouvoir": { "id": "routes/Promouvoir", "parentId": "root", "path": "Promouvoir", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Promouvoir-DzYX_PWi.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Activites": { "id": "routes/Activites", "parentId": "root", "path": "Activites", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activites-CZ4jube1.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-Dy0oxbCn.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Apprendre-DPjF9k_d.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-CEr6tsam.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-BIJtSLuQ.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Accueil-BW0YoGij.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-CyScHUX4.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Adherer-BOXkupWp.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Contact": { "id": "routes/Contact", "parentId": "root", "path": "Contact", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Contact-D3F0hvcu.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": [] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-D_mD5Bbr.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": true, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-E_txR8nz.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] } }, "url": "/assets/manifest-983f1b75.js", "version": "983f1b75" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-Cp_qPLvg.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-BFOaCRWr.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": ["/assets/root-DPCjUYno.css"] }, "routes/Promouvoir": { "id": "routes/Promouvoir", "parentId": "root", "path": "Promouvoir", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Promouvoir-DzYX_PWi.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Activites": { "id": "routes/Activites", "parentId": "root", "path": "Activites", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activites-CZ4jube1.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-DbUMOkFV.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Apprendre-DPjF9k_d.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-CEr6tsam.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-dP0rRgAt.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Accueil-BW0YoGij.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-CyScHUX4.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Adherer-BOXkupWp.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Contact": { "id": "routes/Contact", "parentId": "root", "path": "Contact", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Contact-D3F0hvcu.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": [] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-D_mD5Bbr.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": true, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-CN_eEU9x.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] } }, "url": "/assets/manifest-d1859238.js", "version": "d1859238" };
 const mode = "production";
 const assetsBuildDirectory = "build/client";
 const basename = "/";
