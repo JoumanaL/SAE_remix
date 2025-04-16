@@ -602,4 +602,4 @@ right: ${e=>e.isOpen?"0px":"-400px"};
   @media (max-width: 550px) {
     margin: 20px 0;
   }
-`;function L(){return n.jsxs("html",{lang:"fr",children:[n.jsxs("head",{children:[n.jsx("meta",{charSet:"utf-8"}),n.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1"}),n.jsx(q,{}),n.jsx(U,{})]}),n.jsxs("body",{children:[n.jsx(T,{}),n.jsx(u,{}),n.jsx(O,{}),n.jsx(z,{}),n.jsx(Y,{})]})]})}export{L as default};
+`;function L(){return n.jsxs("html",{lang:"fr",children:[n.jsxs("head",{children:[n.jsx("meta",{charSet:"utf-8"}),n.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1"}),n.jsx(q,{}),n.jsx(U,{})]}),n.jsxs("body",{children:[n.jsx(T,{}),"    ",n.jsx(u,{}),"       ",n.jsx(O,{}),"       ",n.jsx(z,{}),n.jsx(Y,{})]})]})}export{L as default};

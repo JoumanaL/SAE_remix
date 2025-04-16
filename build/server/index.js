@@ -319,8 +319,11 @@ function App() {
     ] }),
     /* @__PURE__ */ jsxs("body", { children: [
       /* @__PURE__ */ jsx(TopNavbar, {}),
+      "    ",
       /* @__PURE__ */ jsx(Outlet, {}),
+      "       ",
       /* @__PURE__ */ jsx(Contact$1, {}),
+      "       ",
       /* @__PURE__ */ jsx(ScrollRestoration, {}),
       /* @__PURE__ */ jsx(Scripts, {})
     ] })
@@ -787,14 +790,6 @@ const UniversityTable = ({ university }) => {
   ] });
 };
 const heroImage$2 = "/assets/img/italie_rome.jpg";
-const logoSorbonneNouvelle = "/assets/img/logo_UNI_SorbonneNouvelle.png";
-const logoParisSorbonne = "/assets/img/logo_UNI_ParisSorbonne.png";
-const logoIutStDenis = "/assets/img/logo_IUT_StDenis.png";
-const logoUpec = "/assets/img/logo_UNI_Upec.png";
-const logoParis8 = "/assets/img/logo_UNI_Paris8.png";
-const logoNanterre = "/assets/img/logo_UNI_Nanterre.png";
-const logoStQuentin = "/assets/img/logo_UNI_StQuentin.png";
-const logoEvry = "/assets/img/logo_UNI_Evry.png";
 const Apprendre = () => {
   const title = "Apprendre l'italien";
   const description = "Bienvenue sur notre page apprendre. Découvrez les façons d'apprendre la langue italienne en formation Post-BAC.";
@@ -802,7 +797,7 @@ const Apprendre = () => {
   const universitiesDataParis = [
     {
       name: "Université Paris 3 Sorbonne Nouvelle",
-      logo: logoSorbonneNouvelle,
+      logo: "/assets/img/logo_UNI_SorbonneNouvelle.png",
       website: "https://www.exemple1.com",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsx("li", { children: "Licence LLCER d'italien" }),
@@ -816,7 +811,7 @@ const Apprendre = () => {
     },
     {
       name: "Université Paris IV-Sorbonne",
-      logo: logoParisSorbonne,
+      logo: "/assets/img/logo_UNI_ParisSorbonne.png",
       website: "https://www.exemple2.com",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsx("li", { children: "Deux parcours de spécialité : Littérature et culture / Langue et Traduction" }),
@@ -829,19 +824,19 @@ const Apprendre = () => {
   const universitiesDataCreteil = [
     {
       name: "I.U.T. de Saint Denis - Campus de La Plaine",
-      logo: logoIutStDenis,
+      logo: "/assets/img/logo_IUT_StDenis.png",
       website: "https://www.iutsd.univ-paris13.fr",
       courses: /* @__PURE__ */ jsx("ul", { children: /* @__PURE__ */ jsx("li", { children: "Cursus Techniques de commercialisation" }) })
     },
     {
       name: "Paris Est Créteil Val de Marne (Paris XII)",
-      logo: logoUpec,
+      logo: "/assets/img/logo_IUT_StDenis.png",
       website: "http://www.u-pec.fr/",
       courses: /* @__PURE__ */ jsx("ul", { children: /* @__PURE__ */ jsx("li", { children: "LEA : Langues Étrangères Appliquées" }) })
     },
     {
       name: "Université Vincennes-Saint-Denis (Paris VIII)",
-      logo: logoParis8,
+      logo: "/assets/img/logo_UNI_Paris8.png",
       website: "https://univ-paris8.fr",
       courses: /* @__PURE__ */ jsx("ul", { children: /* @__PURE__ */ jsx("li", { children: "UFR LLCE italien, LEA anglais-italien, allemand-italien, espagnol-italien" }) })
     }
@@ -849,7 +844,7 @@ const Apprendre = () => {
   const universitiesDataVersailles = [
     {
       name: "Université Paris X Nanterre",
-      logo: logoNanterre,
+      logo: "/assets/img/logo_UNI_Nanterre.png",
       website: "https://dep-italien.parisnanterre.fr",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsxs("li", { children: [
@@ -870,7 +865,7 @@ const Apprendre = () => {
     },
     {
       name: "Université de Versailles / Saint Quentin",
-      logo: logoStQuentin,
+      logo: "/assets/img/logo_UNI_StQuentin.png",
       website: "http://www.uvsq.fr/",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsx("li", { children: "Licence Anglais / Droit" }),
@@ -880,7 +875,7 @@ const Apprendre = () => {
     },
     {
       name: "Université d’Evry Val d’Essonne",
-      logo: logoEvry,
+      logo: "/assets/img/logo_UNI_Evry.png",
       website: "http://www.univ-evry.fr/",
       courses: /* @__PURE__ */ jsxs("ul", { children: [
         /* @__PURE__ */ jsx("li", { children: "LEA en langue complémentaire (LV3)" }),
@@ -1147,38 +1142,103 @@ const Adherer = () => {
       /* @__PURE__ */ jsx("h3", { children: "Comment y adhérer ?" }),
       /* @__PURE__ */ jsx("p", { className: "p", children: "Pour devenir membres il faut : remplir une fiche d’inscription ET verser annuellement une cotisation, dont le montant est fixé chaque année par le Conseil d’administration." }),
       /* @__PURE__ */ jsx("button", { className: "button", onClick: () => window.open(FicheAdhesionPDF, "_blank"), children: "Télécharger la fiche d'adhésion" }),
+      "//",
       /* @__PURE__ */ jsxs("form", { className: "formulaire-adhesion", onSubmit: (e) => e.preventDefault(), children: [
+        /* @__PURE__ */ jsx("h2", { children: "Identité" }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Nom :" }),
-          /* @__PURE__ */ jsx("input", { type: "text", name: "nom", className: "input", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Nom :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "nom", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Prénom :" }),
-          /* @__PURE__ */ jsx("input", { type: "text", name: "prenom", className: "input", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Prénom :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "prenom", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Adresse :" }),
-          /* @__PURE__ */ jsx("input", { type: "text", name: "adresse", className: "input", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Adresse (n°, rue) :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "adresse", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Code postal :" }),
-          /* @__PURE__ */ jsx("input", { type: "text", name: "code_postal", className: "input input-small", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Code postal :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "code_postal", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Ville :" }),
-          /* @__PURE__ */ jsx("input", { type: "text", name: "ville", className: "input", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Ville :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "ville", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Adresse e-mail :" }),
-          /* @__PURE__ */ jsx("input", { type: "email", name: "email", className: "input", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Téléphone :" }),
+          /* @__PURE__ */ jsx("input", { type: "tel", name: "telephone", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Téléphone :" }),
-          /* @__PURE__ */ jsx("input", { type: "tel", name: "telephone", className: "input", required: true })
+          /* @__PURE__ */ jsx("label", { children: "Email :" }),
+          /* @__PURE__ */ jsx("input", { type: "email", name: "email", required: true })
+        ] }),
+        /* @__PURE__ */ jsx("h2", { children: "Établissement" }),
+        /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
+          /* @__PURE__ */ jsx("label", { children: "Nom de l'établissement :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "etablissement" })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
-          /* @__PURE__ */ jsx("label", { className: "p", children: "Fonction / Établissement :" }),
-          /* @__PURE__ */ jsx("input", { type: "text", name: "fonction", className: "input" })
+          /* @__PURE__ */ jsx("label", { children: "Statut :" }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "statut_etab", value: "public" }),
+            " Public"
+          ] }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "statut_etab", value: "prive" }),
+            " Privé"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsx("h2", { children: "Situation" }),
+        /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "situation", value: "renouvellement" }),
+            " Souhaite renouveler son adhésion à l'APIRP"
+          ] }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "situation", value: "premiere" }),
+            " Souhaite adhérer pour la première fois à l'APIRP"
+          ] }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "situation", value: "modification" }),
+            " Vous prie de changer ses coordonnées"
+          ] }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "situation", value: "depart" }),
+            " Ne fera plus partie de l’APIRP à partir du :"
+          ] }),
+          /* @__PURE__ */ jsx("input", { type: "date", name: "date_depart" })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
+          /* @__PURE__ */ jsx("label", { children: "Montant de la cotisation :" }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "cotisation", value: "23" }),
+            " 23€ (cotisation normale)"
+          ] }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "cotisation", value: "30" }),
+            " 30€ (cotisation de soutien)"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
+          /* @__PURE__ */ jsx("label", { children: "Autorisation :" }),
+          /* @__PURE__ */ jsx("p", { children: "Autorise l’APIRP à transmettre mes coordonnées aux instances institutionnelles :" }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "autorisation", value: "oui" }),
+            " OUI"
+          ] }),
+          /* @__PURE__ */ jsxs("label", { children: [
+            /* @__PURE__ */ jsx("input", { type: "radio", name: "autorisation", value: "non" }),
+            " NON"
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
+          /* @__PURE__ */ jsx("label", { children: "Date :" }),
+          /* @__PURE__ */ jsx("input", { type: "date", name: "date_signature", required: true })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "form-row", children: [
+          /* @__PURE__ */ jsx("label", { children: "Signature (Nom Prénom) :" }),
+          /* @__PURE__ */ jsx("input", { type: "text", name: "signature", required: true })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "paypal-section", children: [
           /* @__PURE__ */ jsx("h3", { className: "h3", children: "Paiement de la cotisation" }),
@@ -1548,7 +1608,6 @@ const route7 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   __proto__: null,
   default: ContactPage
 }, Symbol.toStringTag, { value: "Module" }));
-const paysageItalie = "/assets/img/paysage_italie.jpg";
 const DiversPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -1587,7 +1646,7 @@ const DiversPage = () => {
     /* @__PURE__ */ jsx(
       "img",
       {
-        src: paysageItalie,
+        src: "/assets/img/paysage_italie.jpg",
         alt: "Image d'illustration",
         className: "login-image img"
       }
@@ -1807,7 +1866,7 @@ const route10 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePrope
   __proto__: null,
   default: ForumPage
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-Cp_qPLvg.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-BFOaCRWr.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": ["/assets/root-DPCjUYno.css"] }, "routes/Promouvoir": { "id": "routes/Promouvoir", "parentId": "root", "path": "Promouvoir", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Promouvoir-DzYX_PWi.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Activites": { "id": "routes/Activites", "parentId": "root", "path": "Activites", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activites-CZ4jube1.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-DbUMOkFV.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Apprendre-DPjF9k_d.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-CEr6tsam.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-dP0rRgAt.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Accueil-BW0YoGij.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-CyScHUX4.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Adherer-BOXkupWp.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Contact": { "id": "routes/Contact", "parentId": "root", "path": "Contact", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Contact-D3F0hvcu.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": [] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-D_mD5Bbr.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": true, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-CN_eEU9x.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] } }, "url": "/assets/manifest-d1859238.js", "version": "d1859238" };
+const serverManifest = { "entry": { "module": "/assets/entry.client-Cp_qPLvg.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/root-B-mzeXw4.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/components-N5w5wBNu.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": ["/assets/root-DPCjUYno.css"] }, "routes/Promouvoir": { "id": "routes/Promouvoir", "parentId": "root", "path": "Promouvoir", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Promouvoir-DzYX_PWi.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Activites": { "id": "routes/Activites", "parentId": "root", "path": "Activites", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Activites-CZ4jube1.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] }, "routes/Apprendre": { "id": "routes/Apprendre", "parentId": "root", "path": "Apprendre", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Apprendre-B2BmWouG.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Apprendre-DPjF9k_d.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Enseigner": { "id": "routes/Enseigner", "parentId": "root", "path": "Enseigner", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Enseigner-CEr6tsam.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Enseigner-DZu4l4pG.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Accueil": { "id": "routes/Accueil", "parentId": "root", "path": "Accueil", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Accueil-dP0rRgAt.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Accueil-BW0YoGij.css"] }, "routes/Adherer": { "id": "routes/Adherer", "parentId": "root", "path": "Adherer", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Adherer-gHwhEuLz.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/Hero-BuidwHQx.js"], "css": ["/assets/Adherer-BOXkupWp.css", "/assets/Hero-BBsy4Mtl.css"] }, "routes/Contact": { "id": "routes/Contact", "parentId": "root", "path": "Contact", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Contact-D3F0hvcu.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js"], "css": [] }, "routes/Divers": { "id": "routes/Divers", "parentId": "root", "path": "Divers", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Divers-BfVmF-gR.js", "imports": ["/assets/index-BJHAE5s4.js"], "css": ["/assets/Divers-Deborqjc.css"] }, "routes/_index": { "id": "routes/_index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": true, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/_index-l0sNRNKZ.js", "imports": [], "css": [] }, "routes/Forum": { "id": "routes/Forum", "parentId": "root", "path": "Forum", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasErrorBoundary": false, "module": "/assets/Forum-CN_eEU9x.js", "imports": ["/assets/index-BJHAE5s4.js", "/assets/emotion-styled.browser.esm-BbCF7bfL.js", "/assets/FullButton-ejTrJOCd.js"], "css": [] } }, "url": "/assets/manifest-2bf263b0.js", "version": "2bf263b0" };
 const mode = "production";
 const assetsBuildDirectory = "build/client";
 const basename = "/";

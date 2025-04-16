@@ -64,88 +64,124 @@ const handleScrollToContent = () => {};
                 <button className="button" onClick={() => window.open(FicheAdhesionPDF, '_blank')}>Télécharger la fiche d'adhésion</button>
                 
 
+// 
+          <form className="formulaire-adhesion" onSubmit={(e) => e.preventDefault()}>
+            <h2>Identité</h2>
 
+            <div className="form-row">
+              <label>Nom :</label>
+              <input type="text" name="nom" required />
+            </div>
 
-                
-                <form className="formulaire-adhesion" onSubmit={(e) => e.preventDefault()}>
-  <div className="form-row">
-    <label className="p">Nom :</label>
-    <input type="text" name="nom" className="input" required />
-  </div>
+            <div className="form-row">
+              <label>Prénom :</label>
+              <input type="text" name="prenom" required />
+            </div>
 
-  <div className="form-row">
-    <label className="p">Prénom :</label>
-    <input type="text" name="prenom" className="input" required />
-  </div>
+            <div className="form-row">
+              <label>Adresse (n°, rue) :</label>
+              <input type="text" name="adresse" required />
+            </div>
 
-  <div className="form-row">
-    <label className="p">Adresse :</label>
-    <input type="text" name="adresse" className="input" required />
-  </div>
+            <div className="form-row">
+              <label>Code postal :</label>
+              <input type="text" name="code_postal" required />
+            </div>
 
-  <div className="form-row">
-    <label className="p">Code postal :</label>
-    <input type="text" name="code_postal" className="input input-small" required />
-  </div>
+            <div className="form-row">
+              <label>Ville :</label>
+              <input type="text" name="ville" required />
+            </div>
 
-  <div className="form-row">
-    <label className="p">Ville :</label>
-    <input type="text" name="ville" className="input" required />
-  </div>
+            <div className="form-row">
+              <label>Téléphone :</label>
+              <input type="tel" name="telephone" required />
+            </div>
 
-  <div className="form-row">
-    <label className="p">Adresse e-mail :</label>
-    <input type="email" name="email" className="input" required />
-  </div>
+            <div className="form-row">
+              <label>Email :</label>
+              <input type="email" name="email" required />
+            </div>
 
-  <div className="form-row">
-    <label className="p">Téléphone :</label>
-    <input type="tel" name="telephone" className="input" required />
-  </div>
+            <h2>Établissement</h2>
 
-  <div className="form-row">
-    <label className="p">Fonction / Établissement :</label>
-    <input type="text" name="fonction" className="input" />
-  </div>
+            <div className="form-row">
+              <label>Nom de l'établissement :</label>
+              <input type="text" name="etablissement" />
+            </div>
 
+            <div className="form-row">
+              <label>Statut :</label>
+              <label><input type="radio" name="statut_etab" value="public" /> Public</label>
+              <label><input type="radio" name="statut_etab" value="prive" /> Privé</label>
+            </div>
 
+            <h2>Situation</h2>
 
+            <div className="form-row">
+              <label><input type="radio" name="situation" value="renouvellement" /> Souhaite renouveler son adhésion à l'APIRP</label>
+              <label><input type="radio" name="situation" value="premiere" /> Souhaite adhérer pour la première fois à l'APIRP</label>
+              <label><input type="radio" name="situation" value="modification" /> Vous prie de changer ses coordonnées</label>
+              <label><input type="radio" name="situation" value="depart" /> Ne fera plus partie de l’APIRP à partir du :</label>
+              <input type="date" name="date_depart" />
+            </div>
 
+            <div className="form-row">
+              <label>Montant de la cotisation :</label>
+              <label><input type="radio" name="cotisation" value="23" /> 23€ (cotisation normale)</label>
+              <label><input type="radio" name="cotisation" value="30" /> 30€ (cotisation de soutien)</label>
+            </div>
 
-{/* Paiement PayPal */}
+            <div className="form-row">
+              <label>Autorisation :</label>
+              <p>Autorise l’APIRP à transmettre mes coordonnées aux instances institutionnelles :</p>
+              <label><input type="radio" name="autorisation" value="oui" /> OUI</label>
+              <label><input type="radio" name="autorisation" value="non" /> NON</label>
+            </div>
 
-  {/* Bouton PayPal à personnaliser */}
-  {/* 
-    Pour obtenir le vôtre :
-      1. Créez un compte PayPal Business
-      2. Allez dans "Outils" > "Créer un bouton de paiement"
-      3. Choisissez "Don", entrez le nom, montant, etc.
-      4. Copiez le code HTML généré et remplacez le bloc ci-dessous
-  */}
+            <div className="form-row">
+              <label>Date :</label>
+              <input type="date" name="date_signature" required />
+            </div>
 
-<div className="paypal-section">
-  <h3 className="h3">Paiement de la cotisation</h3>
-  <p className="p">Cliquez sur le bouton ci-dessous pour payer votre cotisation en ligne :</p>
+            <div className="form-row">
+              <label>Signature (Nom Prénom) :</label>
+              <input type="text" name="signature" required />
+            </div>
+          {/* Paiement PayPal */}
 
-  {/* Remplace ce lien par TON lien PayPal */}
-  <a
-    href="https://www.paypal.com/donate?hosted_button_id=TON_ID_PAYPAL"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <img
-      src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif"
-      alt="Pay with PayPal"
-    />
-  </a>
-</div>
-<button type="submit" className="button">Envoyer</button>
-</form>
-            </div>      
-            
-        </div>
+            {/* Bouton PayPal à personnaliser */}
+            {/* 
+              Pour obtenir le vôtre :
+                1. Créez un compte PayPal Business
+                2. Allez dans "Outils" > "Créer un bouton de paiement"
+                3. Choisissez "Don", entrez le nom, montant, etc.
+                4. Copiez le code HTML généré et remplacez le bloc ci-dessous
+            */}
 
-    );
-}
+          <div className="paypal-section">
+            <h3 className="h3">Paiement de la cotisation</h3>
+            <p className="p">Cliquez sur le bouton ci-dessous pour payer votre cotisation en ligne :</p>
 
-export default Adherer;
+            {/* Remplace ce lien par TON lien PayPal */}
+            <a
+              href="https://www.paypal.com/donate?hosted_button_id=TON_ID_PAYPAL"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif"
+                alt="Pay with PayPal"
+              />
+            </a>
+          </div>
+          <button type="submit" className="button">Envoyer</button>
+          </form>
+                      </div>      
+                      
+                  </div>
+
+              );
+          }
+
+          export default Adherer;

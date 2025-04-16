@@ -4,8 +4,6 @@ import TabImg from '../components/TabImg';
 import Actualite from '../components/Elements/Actualite'; // Composant d'actualité
 
 
-
-
 const Accueil = () => {
   return (
     <div className="accueil-container">

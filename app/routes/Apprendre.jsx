@@ -5,16 +5,6 @@ import '../styles/Apprendre.css';
 // Image hero (dans public)
 const heroImage = "/assets/img/italie_rome.jpg";
 
-// Logos des universités (dans public)
-const logoSorbonneNouvelle = "/assets/img/logo_UNI_SorbonneNouvelle.png";
-const logoParisSorbonne = "/assets/img/logo_UNI_ParisSorbonne.png";
-const logoIutStDenis = "/assets/img/logo_IUT_StDenis.png";
-const logoUpec = "/assets/img/logo_UNI_Upec.png";
-const logoParis8 = "/assets/img/logo_UNI_Paris8.png";
-const logoNanterre = "/assets/img/logo_UNI_Nanterre.png";
-const logoStQuentin = "/assets/img/logo_UNI_StQuentin.png";
-const logoEvry = "/assets/img/logo_UNI_Evry.png";
-
 const Apprendre = () => {
   const title = "Apprendre l'italien";
   const description = "Bienvenue sur notre page apprendre. Découvrez les façons d'apprendre la langue italienne en formation Post-BAC.";
@@ -23,7 +13,7 @@ const Apprendre = () => {
   const universitiesDataParis = [
     {
       name: "Université Paris 3 Sorbonne Nouvelle",
-      logo: logoSorbonneNouvelle,
+      logo:"/assets/img/logo_UNI_SorbonneNouvelle.png",
       website: "https://www.exemple1.com",
       courses: (
         <ul>
@@ -39,7 +29,7 @@ const Apprendre = () => {
     },
     {
       name: "Université Paris IV-Sorbonne",
-      logo: logoParisSorbonne,
+      logo: "/assets/img/logo_UNI_ParisSorbonne.png",
       website: "https://www.exemple2.com",
       courses: (
         <ul>
@@ -55,7 +45,7 @@ const Apprendre = () => {
   const universitiesDataCreteil = [
     {
       name: "I.U.T. de Saint Denis - Campus de La Plaine",
-      logo: logoIutStDenis,
+      logo: "/assets/img/logo_IUT_StDenis.png",
       website: "https://www.iutsd.univ-paris13.fr",
       courses: (
         <ul>
@@ -65,7 +55,7 @@ const Apprendre = () => {
     },
     {
       name: "Paris Est Créteil Val de Marne (Paris XII)",
-      logo: logoUpec,
+      logo: "/assets/img/logo_IUT_StDenis.png",
       website: "http://www.u-pec.fr/",
       courses: (
         <ul>
@@ -75,7 +65,7 @@ const Apprendre = () => {
     },
     {
       name: "Université Vincennes-Saint-Denis (Paris VIII)",
-      logo: logoParis8,
+      logo: "/assets/img/logo_UNI_Paris8.png",
       website: "https://univ-paris8.fr",
       courses: (
         <ul>
@@ -88,7 +78,7 @@ const Apprendre = () => {
   const universitiesDataVersailles = [
     {
       name: "Université Paris X Nanterre",
-      logo: logoNanterre,
+      logo: "/assets/img/logo_UNI_Nanterre.png",
       website: "https://dep-italien.parisnanterre.fr",
       courses: (
         <ul>
@@ -111,7 +101,7 @@ const Apprendre = () => {
     },
     {
       name: "Université de Versailles / Saint Quentin",
-      logo: logoStQuentin,
+      logo: "/assets/img/logo_UNI_StQuentin.png",
       website: "http://www.uvsq.fr/",
       courses: (
         <ul>
@@ -123,7 +113,7 @@ const Apprendre = () => {
     },
     {
       name: "Université d’Evry Val d’Essonne",
-      logo: logoEvry,
+      logo: "/assets/img/logo_UNI_Evry.png",
       website: "http://www.univ-evry.fr/",
       courses: (
         <ul>

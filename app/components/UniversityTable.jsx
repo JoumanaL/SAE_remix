@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/UniversityTable.css';
+import '../styles/UniversityTable.css';  
 
 const UniversityTable = ({ university }) => {
     return (

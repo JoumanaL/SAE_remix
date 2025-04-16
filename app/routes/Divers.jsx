@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Divers.css';
 
-// Image servie depuis /public
-const paysageItalie = "/assets/img/paysage_italie.jpg";
 
 const DiversPage = () => {
   const [username, setUsername] = useState('');
@@ -39,7 +37,7 @@ const DiversPage = () => {
       </form>
       {/* Image ajoutée pour l'esthétique */}
       <img
-  src={paysageItalie}
+  src="/assets/img/paysage_italie.jpg"
   alt="Image d'illustration"
   className="login-image img"
 />
