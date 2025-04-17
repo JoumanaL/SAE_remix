@@ -36,12 +36,12 @@ const DiversPage = () => {
         <button className='button' type="submit">Se connecter</button>
       </form>
       {/* Image ajoutée pour l'esthétique */}
+
       <img
   src="/assets/img/paysage_italie.jpg"
   alt="Image d'illustration"
   className="login-image img"
 />
-
     </div>
   );
 };

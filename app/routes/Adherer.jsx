@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../components/Hero'; // Assure-toi d'importer le composant Hero correctement
+import Hero from '../components/Hero'; 
 import '../styles/Adherer.css';
 import FicheAdhesionPDF from "/assets/fiche_adhesion.pdf";
 const adhererImg = "/assets/img/img-adherer.png";
@@ -63,8 +63,8 @@ const handleScrollToContent = () => {};
 
                 <button className="button" onClick={() => window.open(FicheAdhesionPDF, '_blank')}>Télécharger la fiche d'adhésion</button>
                 
+ {/* Formulaire */}
 
-// 
           <form className="formulaire-adhesion" onSubmit={(e) => e.preventDefault()}>
             <h2>Identité</h2>
 
